@@ -9,7 +9,7 @@ namespace OrderMe.DAL
 {
     public class Repository
     {
-
+        //SINGLETON FOR SINGLE THREAD
         private readonly ApplicationDbContext _Context;
 
         private Repository()

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.ErrorTxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UsernameTxtBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,33 +38,47 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ExitBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.SignInBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuGradientPanel2);
+            this.bunifuGradientPanel1.Controls.Add(this.ErrorTxt);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.UsernameTxtBox);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanel1.Controls.Add(this.PasswordTxtBox);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.ExitBtn);
             this.bunifuGradientPanel1.Controls.Add(this.SignInBtn);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.Highlight;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.SeaGreen;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Violet;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DimGray;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LavenderBlush;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.SystemColors.ButtonFace;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(384, 361);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // ErrorTxt
+            // 
+            this.ErrorTxt.AutoSize = true;
+            this.ErrorTxt.BackColor = System.Drawing.Color.Transparent;
+            this.ErrorTxt.ForeColor = System.Drawing.Color.Yellow;
+            this.ErrorTxt.Location = new System.Drawing.Point(145, 75);
+            this.ErrorTxt.Name = "ErrorTxt";
+            this.ErrorTxt.Size = new System.Drawing.Size(44, 13);
+            this.ErrorTxt.TabIndex = 12;
+            this.ErrorTxt.Text = "ErrorTxt";
             // 
             // pictureBox2
             // 
@@ -71,7 +86,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ImageLocation = "";
-            this.pictureBox2.Location = new System.Drawing.Point(43, 171);
+            this.pictureBox2.Location = new System.Drawing.Point(133, 171);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -91,10 +106,10 @@
             this.UsernameTxtBox.LineIdleColor = System.Drawing.Color.DarkCyan;
             this.UsernameTxtBox.LineMouseHoverColor = System.Drawing.Color.White;
             this.UsernameTxtBox.LineThickness = 3;
-            this.UsernameTxtBox.Location = new System.Drawing.Point(78, 102);
+            this.UsernameTxtBox.Location = new System.Drawing.Point(169, 102);
             this.UsernameTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameTxtBox.Name = "UsernameTxtBox";
-            this.UsernameTxtBox.Size = new System.Drawing.Size(261, 38);
+            this.UsernameTxtBox.Size = new System.Drawing.Size(190, 38);
             this.UsernameTxtBox.TabIndex = 8;
             this.UsernameTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -103,7 +118,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.DarkCyan;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 102);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 102);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -123,10 +138,10 @@
             this.PasswordTxtBox.LineIdleColor = System.Drawing.Color.DarkCyan;
             this.PasswordTxtBox.LineMouseHoverColor = System.Drawing.Color.White;
             this.PasswordTxtBox.LineThickness = 3;
-            this.PasswordTxtBox.Location = new System.Drawing.Point(78, 171);
+            this.PasswordTxtBox.Location = new System.Drawing.Point(169, 171);
             this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
-            this.PasswordTxtBox.Size = new System.Drawing.Size(261, 38);
+            this.PasswordTxtBox.Size = new System.Drawing.Size(190, 38);
             this.PasswordTxtBox.TabIndex = 9;
             this.PasswordTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -138,9 +153,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(99, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(106, 24);
             this.bunifuCustomLabel1.TabIndex = 4;
-            this.bunifuCustomLabel1.Text = "OrderMe";
+            this.bunifuCustomLabel1.Text = "Order Me";
             // 
             // ExitBtn
             // 
@@ -163,7 +178,7 @@
             this.SignInBtn.ActiveFillColor = System.Drawing.Color.LightSeaGreen;
             this.SignInBtn.ActiveForecolor = System.Drawing.Color.White;
             this.SignInBtn.ActiveLineColor = System.Drawing.Color.White;
-            this.SignInBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SignInBtn.BackColor = System.Drawing.SystemColors.Control;
             this.SignInBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SignInBtn.BackgroundImage")));
             this.SignInBtn.ButtonText = "Sign In";
             this.SignInBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -174,13 +189,28 @@
             this.SignInBtn.IdleFillColor = System.Drawing.Color.DarkCyan;
             this.SignInBtn.IdleForecolor = System.Drawing.Color.White;
             this.SignInBtn.IdleLineColor = System.Drawing.Color.White;
-            this.SignInBtn.Location = new System.Drawing.Point(93, 235);
+            this.SignInBtn.Location = new System.Drawing.Point(158, 234);
             this.SignInBtn.Margin = new System.Windows.Forms.Padding(5);
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(181, 41);
             this.SignInBtn.TabIndex = 0;
             this.SignInBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SignInBtn.Click += new System.EventHandler(this.SignInBtn_Click);
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuCustomLabel1);
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Magenta;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.DimGray;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.DarkRed;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Red;
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(122, 361);
+            this.bunifuGradientPanel2.TabIndex = 13;
             // 
             // Login
             // 
@@ -197,6 +227,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -209,5 +241,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox UsernameTxtBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox PasswordTxtBox;
+        private Bunifu.Framework.UI.BunifuCustomLabel ErrorTxt;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
     }
 }

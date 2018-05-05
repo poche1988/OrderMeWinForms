@@ -1,11 +1,8 @@
 namespace OrderMe.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<OrderMe.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<OrderMe.DAL.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,7 +10,7 @@ namespace OrderMe.Migrations
             ContextKey = "OrderMe.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(OrderMe.Models.ApplicationDbContext context)
+        protected override void Seed(OrderMe.DAL.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

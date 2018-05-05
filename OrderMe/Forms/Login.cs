@@ -1,6 +1,5 @@
 ﻿using OrderMe.DAL;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace OrderMe.Forms
@@ -10,8 +9,8 @@ namespace OrderMe.Forms
         private Repository _repository;
         public Login()
         {
-            InitializeComponent();
             _repository = Repository.GetInstance();
+            InitializeComponent();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -38,19 +37,24 @@ namespace OrderMe.Forms
                     }
                     else
                     {
-                        //error wrong pass
+                        ShowErrorMsg("Wrong password");
                     }
                 }
                 else
                 {
-                    //error wrong username
+                    ShowErrorMsg("Wrong username");
                 }
             }
             else
             {
-                // error complete both fieldsss
+                ShowErrorMsg("Both fields are required");
             }
 
+        }
+
+        private void ShowErrorMsg(string error)
+        {
+            ErrorTxt.Text = error;
         }
     }
 }
