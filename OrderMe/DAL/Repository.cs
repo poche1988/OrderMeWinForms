@@ -15,6 +15,8 @@ namespace OrderMe.DAL
         private Repository()
         {
             _Context = new ApplicationDbContext();
+            _Context.Configuration.ProxyCreationEnabled = false;
+            _Context.Configuration.LazyLoadingEnabled = false;
         }
 
         private static Repository instance = null;
@@ -36,6 +38,11 @@ namespace OrderMe.DAL
         {
             var user = new User();
             return _Context.Users.Where(u => u.Username == username).FirstOrDefault();
+        }
+
+        public List<User> GetUsers()
+        {
+            return _Context.Users.ToList();
         }
 
         #endregion
