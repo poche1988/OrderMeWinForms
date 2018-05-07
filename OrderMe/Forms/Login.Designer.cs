@@ -126,10 +126,10 @@
             // 
             this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
             this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.Crimson;
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(169, 204);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
@@ -140,10 +140,10 @@
             // 
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.Crimson;
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.Crimson;
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(169, 135);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
@@ -153,7 +153,7 @@
             // SignIn
             // 
             this.SignIn.Activecolor = System.Drawing.Color.Crimson;
-            this.SignIn.BackColor = System.Drawing.Color.DeepPink;
+            this.SignIn.BackColor = System.Drawing.Color.Crimson;
             this.SignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SignIn.BorderRadius = 0;
             this.SignIn.ButtonText = "Sign In";
@@ -173,8 +173,8 @@
             this.SignIn.IsTab = false;
             this.SignIn.Location = new System.Drawing.Point(179, 232);
             this.SignIn.Name = "SignIn";
-            this.SignIn.Normalcolor = System.Drawing.Color.DeepPink;
-            this.SignIn.OnHovercolor = System.Drawing.Color.Crimson;
+            this.SignIn.Normalcolor = System.Drawing.Color.Crimson;
+            this.SignIn.OnHovercolor = System.Drawing.Color.DeepPink;
             this.SignIn.OnHoverTextColor = System.Drawing.Color.White;
             this.SignIn.selected = false;
             this.SignIn.Size = new System.Drawing.Size(130, 48);
@@ -224,7 +224,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DeepPink;
+            this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ImageLocation = "";
@@ -237,7 +237,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DeepPink;
+            this.pictureBox1.BackColor = System.Drawing.Color.Crimson;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(133, 102);
