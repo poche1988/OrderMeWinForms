@@ -30,7 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.UsernameTxtBox = new System.Windows.Forms.TextBox();
+            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.SignIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -38,18 +43,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -77,6 +77,38 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(384, 361);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Controls.Add(this.PasswordTxtBox);
+            this.panel2.Location = new System.Drawing.Point(169, 171);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(190, 35);
+            this.panel2.TabIndex = 18;
+            // 
+            // PasswordTxtBox
+            // 
+            this.PasswordTxtBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTxtBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.PasswordTxtBox.Location = new System.Drawing.Point(8, 7);
+            this.PasswordTxtBox.MaximumSize = new System.Drawing.Size(190, 35);
+            this.PasswordTxtBox.MinimumSize = new System.Drawing.Size(180, 20);
+            this.PasswordTxtBox.Name = "PasswordTxtBox";
+            this.PasswordTxtBox.PasswordChar = '*';
+            this.PasswordTxtBox.Size = new System.Drawing.Size(180, 20);
+            this.PasswordTxtBox.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.UsernameTxtBox);
+            this.panel1.Location = new System.Drawing.Point(169, 102);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(190, 35);
+            this.panel1.TabIndex = 17;
+            // 
             // UsernameTxtBox
             // 
             this.UsernameTxtBox.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -88,8 +120,35 @@
             this.UsernameTxtBox.MinimumSize = new System.Drawing.Size(180, 20);
             this.UsernameTxtBox.Name = "UsernameTxtBox";
             this.UsernameTxtBox.Size = new System.Drawing.Size(180, 20);
-            this.UsernameTxtBox.TabIndex = 14;
-            this.UsernameTxtBox.Text = "password";
+            this.UsernameTxtBox.TabIndex = 1;
+            // 
+            // bunifuGradientPanel4
+            // 
+            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
+            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(169, 204);
+            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
+            this.bunifuGradientPanel4.Quality = 10;
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(190, 5);
+            this.bunifuGradientPanel4.TabIndex = 16;
+            // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.DeepPink;
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(169, 135);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(190, 5);
+            this.bunifuGradientPanel3.TabIndex = 15;
             // 
             // SignIn
             // 
@@ -191,6 +250,7 @@
             // ExitBtn
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.ImageActive = null;
             this.ExitBtn.Location = new System.Drawing.Point(348, 3);
@@ -201,67 +261,6 @@
             this.ExitBtn.TabStop = false;
             this.ExitBtn.Zoom = 10;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
-            // bunifuGradientPanel3
-            // 
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(169, 135);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(190, 5);
-            this.bunifuGradientPanel3.TabIndex = 15;
-            // 
-            // bunifuGradientPanel4
-            // 
-            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
-            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.DeepPink;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(169, 204);
-            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
-            this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(190, 5);
-            this.bunifuGradientPanel4.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.UsernameTxtBox);
-            this.panel1.Location = new System.Drawing.Point(169, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 35);
-            this.panel1.TabIndex = 17;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Controls.Add(this.PasswordTxtBox);
-            this.panel2.Location = new System.Drawing.Point(169, 171);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 35);
-            this.panel2.TabIndex = 18;
-            // 
-            // PasswordTxtBox
-            // 
-            this.PasswordTxtBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxtBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.PasswordTxtBox.Location = new System.Drawing.Point(8, 7);
-            this.PasswordTxtBox.MaximumSize = new System.Drawing.Size(190, 35);
-            this.PasswordTxtBox.MinimumSize = new System.Drawing.Size(180, 20);
-            this.PasswordTxtBox.Name = "PasswordTxtBox";
-            this.PasswordTxtBox.Size = new System.Drawing.Size(180, 20);
-            this.PasswordTxtBox.TabIndex = 15;
-            this.PasswordTxtBox.Text = "";
-            this.PasswordTxtBox.PasswordChar = '*';
             // 
             // Login
             // 
@@ -275,14 +274,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
