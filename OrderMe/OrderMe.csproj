@@ -76,8 +76,17 @@
     <Compile Include="Migrations\201805041303133_initial-migration.Designer.cs">
       <DependentUpon>201805041303133_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805080722300_AllEntityClassesCreated.cs" />
+    <Compile Include="Migrations\201805080722300_AllEntityClassesCreated.Designer.cs">
+      <DependentUpon>201805080722300_AllEntityClassesCreated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ObservableListSource.cs" />
     <Compile Include="Program.cs" />
@@ -93,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805041303133_initial-migration.resx">
       <DependentUpon>201805041303133_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080722300_AllEntityClassesCreated.resx">
+      <DependentUpon>201805080722300_AllEntityClassesCreated.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
