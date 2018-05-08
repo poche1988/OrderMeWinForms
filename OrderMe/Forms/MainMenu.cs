@@ -17,11 +17,6 @@ namespace OrderMe.Forms
             InitializeComponent();
         }
 
-        private void closeBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void MenuBtn_Click(object sender, EventArgs e)
         {
             if (Drawer.Visible)
@@ -32,16 +27,9 @@ namespace OrderMe.Forms
                 tShow.ShowSync(Drawer);
         }
 
-        private void hideDrawer()
+        private void closeBtn_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
-
-        private void showDrawer()
-        {
-
-        }
-
-        
     }
 }
