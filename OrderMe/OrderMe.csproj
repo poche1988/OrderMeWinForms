@@ -130,5 +130,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\588a64e0d06f6719692a2d10.png" />
+    <Content Include="Images\At-Symbol-256.png" />
+    <Content Include="Images\burger-icon.svg" />
+    <Content Include="Images\circle.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\closewhite.png" />
+    <Content Include="Images\icon-product-white.png" />
+    <Content Include="Images\mobile-nav-icon.png" />
+    <Content Include="Images\order.png" />
+    <Content Include="Images\padlock.png" />
+    <Content Include="Images\password.png" />
+    <Content Include="Images\togglemenu.png" />
+    <Content Include="Images\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

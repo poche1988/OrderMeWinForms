@@ -19,7 +19,15 @@ namespace OrderMe.Forms
         public Login()
         {
             _repository = Repository.GetInstance();
-            _Users = _repository.GetUsers();
+            try
+            {
+                _Users = _repository.GetUsers();
+            }
+            catch
+            {
+                MessageBox.Show("Check internet connection");
+                Environment.Exit(-1);
+            }
             InitializeComponent();
         }
 
