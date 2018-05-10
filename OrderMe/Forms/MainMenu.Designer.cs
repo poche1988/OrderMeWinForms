@@ -44,9 +44,9 @@ namespace OrderMe.Forms
             this.closeBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.NewOrderPanel = new System.Windows.Forms.Panel();
-            this.tHide = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.TopPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.TopPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.tHide = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Drawer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
@@ -100,7 +100,7 @@ namespace OrderMe.Forms
             this.NewOrderBtn.IconZoom = 90D;
             this.NewOrderBtn.IsTab = false;
             this.NewOrderBtn.Location = new System.Drawing.Point(0, 90);
-            this.NewOrderBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.NewOrderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewOrderBtn.Name = "NewOrderBtn";
             this.NewOrderBtn.Normalcolor = System.Drawing.Color.Transparent;
             this.NewOrderBtn.OnHovercolor = System.Drawing.Color.DeepPink;
@@ -176,7 +176,7 @@ namespace OrderMe.Forms
             this.OrdersBtn.IconZoom = 50D;
             this.OrdersBtn.IsTab = false;
             this.OrdersBtn.Location = new System.Drawing.Point(0, 151);
-            this.OrdersBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.OrdersBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrdersBtn.Name = "OrdersBtn";
             this.OrdersBtn.Normalcolor = System.Drawing.Color.Transparent;
             this.OrdersBtn.OnHovercolor = System.Drawing.Color.DeepPink;
@@ -275,26 +275,19 @@ namespace OrderMe.Forms
             this.NewOrderPanel.Size = new System.Drawing.Size(1219, 860);
             this.NewOrderPanel.TabIndex = 6;
             // 
-            // tHide
+            // bunifuCustomLabel2
             // 
-            this.tHide.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.tHide.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.tHide.DefaultAnimation = animation1;
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.tShow.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.tHide.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(23, 71);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(106, 24);
+            this.bunifuCustomLabel2.TabIndex = 9;
+            this.bunifuCustomLabel2.Text = "Order Me";
             // 
             // TopPanel
             // 
@@ -316,19 +309,26 @@ namespace OrderMe.Forms
             this.TopPanel.Size = new System.Drawing.Size(1219, 46);
             this.TopPanel.TabIndex = 7;
             // 
-            // bunifuCustomLabel2
+            // tHide
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.tShow.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.tHide.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(23, 71);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(106, 24);
-            this.bunifuCustomLabel2.TabIndex = 9;
-            this.bunifuCustomLabel2.Text = "Order Me";
+            this.tHide.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.tHide.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.tHide.DefaultAnimation = animation1;
             // 
             // MainMenu
             // 

@@ -15,5 +15,13 @@ namespace OrderMe.Models
         public string Company { get; set; }
 
         public string Contact { get; set; }
+
+        public OrderState OrderStatus { get; set; }
+    }
+
+    public enum OrderState
+    {
+        Created,
+        Sent
     }
 }
