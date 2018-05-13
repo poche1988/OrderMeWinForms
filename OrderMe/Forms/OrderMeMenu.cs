@@ -15,6 +15,7 @@ namespace OrderMe.Forms
         public OrderMeMenu()
         {
             InitializeComponent();
+            OpenFormInContainer(new NewOrder());
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -36,6 +37,35 @@ namespace OrderMe.Forms
                 sideMenu.Width = 50;
                 tShow.ShowSync(sideMenu);
             }
+        }
+
+        private void OpenFormInContainer(object form)
+        {
+            if (this.FormContainer.Controls.Count > 0)
+                this.FormContainer.Controls.RemoveAt(0);
+
+            Form f = form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.FormContainer.Controls.Add(f);
+            this.FormContainer.Tag = f;
+            f.Show();
+
+        }
+
+        private void NewOrderBtn_Click(object sender, EventArgs e)
+        {
+            OpenFormInContainer(new NewOrder());
+        }
+
+        private void OrdersBtn_Click(object sender, EventArgs e)
+        {
+            OpenFormInContainer(new Orders());
+        }
+
+        private void ProductsBtn_Click(object sender, EventArgs e)
+        {
+            OpenFormInContainer(new Products());
         }
     }
 }

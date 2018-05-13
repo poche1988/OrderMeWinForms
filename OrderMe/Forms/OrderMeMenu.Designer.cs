@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMeMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sideMenu = new System.Windows.Forms.Panel();
@@ -41,7 +41,7 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.OrdersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ProductsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.FormContainer = new System.Windows.Forms.Panel();
             this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBtn)).BeginInit();
@@ -102,6 +102,7 @@
             this.NewOrderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewOrderBtn.Textcolor = System.Drawing.Color.Silver;
             this.NewOrderBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewOrderBtn.Click += new System.EventHandler(this.NewOrderBtn_Click);
             // 
             // MenuBtn
             // 
@@ -201,6 +202,7 @@
             this.OrdersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OrdersBtn.Textcolor = System.Drawing.Color.Silver;
             this.OrdersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdersBtn.Click += new System.EventHandler(this.OrdersBtn_Click);
             // 
             // ProductsBtn
             // 
@@ -236,36 +238,38 @@
             this.ProductsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProductsBtn.Textcolor = System.Drawing.Color.Silver;
             this.ProductsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductsBtn.Click += new System.EventHandler(this.ProductsBtn_Click);
             // 
-            // panel2
+            // FormContainer
             // 
-            this.tShow.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(50, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 564);
-            this.panel2.TabIndex = 2;
+            this.FormContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.tShow.SetDecoration(this.FormContainer, BunifuAnimatorNS.DecorationType.None);
+            this.FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FormContainer.Location = new System.Drawing.Point(50, 36);
+            this.FormContainer.Name = "FormContainer";
+            this.FormContainer.Size = new System.Drawing.Size(950, 564);
+            this.FormContainer.TabIndex = 2;
             // 
             // tShow
             // 
             this.tShow.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.tShow.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.tShow.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.tShow.DefaultAnimation = animation4;
             // 
             // OrderMeMenu
             // 
@@ -273,7 +277,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.FormContainer);
             this.Controls.Add(this.sideMenu);
             this.Controls.Add(this.Header);
             this.tShow.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -302,7 +306,7 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuFlatButton ProductsBtn;
         private Bunifu.Framework.UI.BunifuFlatButton OrdersBtn;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel FormContainer;
         private BunifuAnimatorNS.BunifuTransition tShow;
     }
 }
