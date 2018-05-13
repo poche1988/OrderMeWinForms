@@ -47,7 +47,7 @@ namespace OrderMe.Forms
                 {
                     if (user.Password == PasswordTxtBox.Text)
                     {
-                        MainMenu mm = new MainMenu();
+                        OrderMeMenu mm = new OrderMeMenu();
                         this.Hide();
                         mm.Show();
 

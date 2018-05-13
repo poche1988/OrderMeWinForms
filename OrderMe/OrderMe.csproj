@@ -62,11 +62,11 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenu.cs">
+    <Compile Include="Forms\OrderMeMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="Forms\OrderMeMenu.Designer.cs">
+      <DependentUpon>OrderMeMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201805041300284_InitialCreate.cs" />
     <Compile Include="Migrations\201805041300284_InitialCreate.Designer.cs">
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\OrderMeMenu.resx">
+      <DependentUpon>OrderMeMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805041300284_InitialCreate.resx">
       <DependentUpon>201805041300284_InitialCreate.cs</DependentUpon>
