@@ -1,20 +1,21 @@
-﻿using System;
+﻿using OrderMe.DAL;
+using OrderMe.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderMe.Forms
 {
     public partial class OrderMeMenu : Form
     {
+        private Repository _repository;
+        private List<Product> _Products;
+
         public OrderMeMenu()
         {
             InitializeComponent();
+            _repository = Repository.GetInstance();
+            _Products = _repository.Getproducts();
             OpenFormInContainer(new NewOrder());
         }
 
@@ -65,7 +66,7 @@ namespace OrderMe.Forms
 
         private void ProductsBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new Products());
+            OpenFormInContainer(new Products(_Products));
         }
     }
 }

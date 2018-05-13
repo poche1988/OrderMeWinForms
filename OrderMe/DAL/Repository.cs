@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
+
 
 namespace OrderMe.DAL
 {
@@ -45,6 +45,18 @@ namespace OrderMe.DAL
             return _Context.Users.ToList();
         }
 
+        #endregion
+
+        #region products
+        public List<Product> Getproducts()
+        {
+            var products = _Context.Products
+                .Include(p=>p.Category)
+                .Include("Category.Brand")
+                .OrderBy(p=>p.Category.ProductCategoryId)
+                .ToList();
+            return products;
+        }
         #endregion
     }
 

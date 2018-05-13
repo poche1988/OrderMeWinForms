@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMeMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sideMenu = new System.Windows.Forms.Panel();
+            this.ProductsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.OrdersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.NewOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.MenuBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.Header = new System.Windows.Forms.Panel();
             this.CloseBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.OrdersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.ProductsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.FormContainer = new System.Windows.Forms.Panel();
             this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sideMenu.SuspendLayout();
@@ -68,10 +68,82 @@
             this.sideMenu.Size = new System.Drawing.Size(50, 564);
             this.sideMenu.TabIndex = 0;
             // 
+            // ProductsBtn
+            // 
+            this.ProductsBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.ProductsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ProductsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ProductsBtn.BorderRadius = 0;
+            this.ProductsBtn.ButtonText = "        Products";
+            this.ProductsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.ProductsBtn, BunifuAnimatorNS.DecorationType.None);
+            this.ProductsBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ProductsBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ProductsBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ProductsBtn.Iconimage")));
+            this.ProductsBtn.Iconimage_right = null;
+            this.ProductsBtn.Iconimage_right_Selected = null;
+            this.ProductsBtn.Iconimage_Selected = null;
+            this.ProductsBtn.IconMarginLeft = 0;
+            this.ProductsBtn.IconMarginRight = 0;
+            this.ProductsBtn.IconRightVisible = true;
+            this.ProductsBtn.IconRightZoom = 0D;
+            this.ProductsBtn.IconVisible = true;
+            this.ProductsBtn.IconZoom = 60D;
+            this.ProductsBtn.IsTab = true;
+            this.ProductsBtn.Location = new System.Drawing.Point(0, 142);
+            this.ProductsBtn.Name = "ProductsBtn";
+            this.ProductsBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ProductsBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.ProductsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ProductsBtn.selected = false;
+            this.ProductsBtn.Size = new System.Drawing.Size(200, 50);
+            this.ProductsBtn.TabIndex = 3;
+            this.ProductsBtn.Text = "        Products";
+            this.ProductsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductsBtn.Textcolor = System.Drawing.Color.Silver;
+            this.ProductsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductsBtn.Click += new System.EventHandler(this.ProductsBtn_Click);
+            // 
+            // OrdersBtn
+            // 
+            this.OrdersBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.OrdersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.OrdersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OrdersBtn.BorderRadius = 0;
+            this.OrdersBtn.ButtonText = "        Orders";
+            this.OrdersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.OrdersBtn, BunifuAnimatorNS.DecorationType.None);
+            this.OrdersBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.OrdersBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.OrdersBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("OrdersBtn.Iconimage")));
+            this.OrdersBtn.Iconimage_right = null;
+            this.OrdersBtn.Iconimage_right_Selected = null;
+            this.OrdersBtn.Iconimage_Selected = null;
+            this.OrdersBtn.IconMarginLeft = 0;
+            this.OrdersBtn.IconMarginRight = 0;
+            this.OrdersBtn.IconRightVisible = true;
+            this.OrdersBtn.IconRightZoom = 0D;
+            this.OrdersBtn.IconVisible = true;
+            this.OrdersBtn.IconZoom = 60D;
+            this.OrdersBtn.IsTab = true;
+            this.OrdersBtn.Location = new System.Drawing.Point(0, 95);
+            this.OrdersBtn.Name = "OrdersBtn";
+            this.OrdersBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.OrdersBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.OrdersBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.OrdersBtn.selected = false;
+            this.OrdersBtn.Size = new System.Drawing.Size(200, 50);
+            this.OrdersBtn.TabIndex = 2;
+            this.OrdersBtn.Text = "        Orders";
+            this.OrdersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OrdersBtn.Textcolor = System.Drawing.Color.Silver;
+            this.OrdersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdersBtn.Click += new System.EventHandler(this.OrdersBtn_Click);
+            // 
             // NewOrderBtn
             // 
             this.NewOrderBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.NewOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.NewOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.NewOrderBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.NewOrderBtn.BorderRadius = 0;
             this.NewOrderBtn.ButtonText = "        New Order";
@@ -168,78 +240,6 @@
             this.bunifuDragControl1.TargetControl = this.Header;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // OrdersBtn
-            // 
-            this.OrdersBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.OrdersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.OrdersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OrdersBtn.BorderRadius = 0;
-            this.OrdersBtn.ButtonText = "        Orders";
-            this.OrdersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tShow.SetDecoration(this.OrdersBtn, BunifuAnimatorNS.DecorationType.None);
-            this.OrdersBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.OrdersBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.OrdersBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("OrdersBtn.Iconimage")));
-            this.OrdersBtn.Iconimage_right = null;
-            this.OrdersBtn.Iconimage_right_Selected = null;
-            this.OrdersBtn.Iconimage_Selected = null;
-            this.OrdersBtn.IconMarginLeft = 0;
-            this.OrdersBtn.IconMarginRight = 0;
-            this.OrdersBtn.IconRightVisible = true;
-            this.OrdersBtn.IconRightZoom = 0D;
-            this.OrdersBtn.IconVisible = true;
-            this.OrdersBtn.IconZoom = 60D;
-            this.OrdersBtn.IsTab = true;
-            this.OrdersBtn.Location = new System.Drawing.Point(0, 95);
-            this.OrdersBtn.Name = "OrdersBtn";
-            this.OrdersBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.OrdersBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.OrdersBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.OrdersBtn.selected = false;
-            this.OrdersBtn.Size = new System.Drawing.Size(200, 50);
-            this.OrdersBtn.TabIndex = 2;
-            this.OrdersBtn.Text = "        Orders";
-            this.OrdersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrdersBtn.Textcolor = System.Drawing.Color.Silver;
-            this.OrdersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrdersBtn.Click += new System.EventHandler(this.OrdersBtn_Click);
-            // 
-            // ProductsBtn
-            // 
-            this.ProductsBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.ProductsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ProductsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ProductsBtn.BorderRadius = 0;
-            this.ProductsBtn.ButtonText = "        Products";
-            this.ProductsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tShow.SetDecoration(this.ProductsBtn, BunifuAnimatorNS.DecorationType.None);
-            this.ProductsBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ProductsBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ProductsBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ProductsBtn.Iconimage")));
-            this.ProductsBtn.Iconimage_right = null;
-            this.ProductsBtn.Iconimage_right_Selected = null;
-            this.ProductsBtn.Iconimage_Selected = null;
-            this.ProductsBtn.IconMarginLeft = 0;
-            this.ProductsBtn.IconMarginRight = 0;
-            this.ProductsBtn.IconRightVisible = true;
-            this.ProductsBtn.IconRightZoom = 0D;
-            this.ProductsBtn.IconVisible = true;
-            this.ProductsBtn.IconZoom = 60D;
-            this.ProductsBtn.IsTab = true;
-            this.ProductsBtn.Location = new System.Drawing.Point(0, 142);
-            this.ProductsBtn.Name = "ProductsBtn";
-            this.ProductsBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ProductsBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.ProductsBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ProductsBtn.selected = false;
-            this.ProductsBtn.Size = new System.Drawing.Size(200, 50);
-            this.ProductsBtn.TabIndex = 3;
-            this.ProductsBtn.Text = "        Products";
-            this.ProductsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductsBtn.Textcolor = System.Drawing.Color.Silver;
-            this.ProductsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsBtn.Click += new System.EventHandler(this.ProductsBtn_Click);
-            // 
             // FormContainer
             // 
             this.FormContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
@@ -254,22 +254,22 @@
             // 
             this.tShow.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.tShow.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.tShow.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.tShow.DefaultAnimation = animation1;
             // 
             // OrderMeMenu
             // 
@@ -282,6 +282,7 @@
             this.Controls.Add(this.Header);
             this.tShow.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderMeMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderMeMenu";
