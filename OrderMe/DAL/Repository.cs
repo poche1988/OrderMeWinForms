@@ -53,7 +53,7 @@ namespace OrderMe.DAL
             var products = _Context.Products
                 .Include(p=>p.Category)
                 .Include("Category.Brand")
-                .OrderBy(p=>p.Category.ProductCategoryId)
+                //.OrderBy(p=>p.Category.ProductCategoryId)
                 .ToList();
             return products;
         }
