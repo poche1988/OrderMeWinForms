@@ -16,7 +16,7 @@ namespace OrderMe.Forms
             InitializeComponent();
             _repository = Repository.GetInstance();
             _Products = _repository.Getproducts();
-            OpenFormInContainer(new NewOrder());
+            OpenFormInContainer(new NewOrder(_Products, _repository));
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace OrderMe.Forms
 
         private void NewOrderBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new NewOrder());
+            OpenFormInContainer(new NewOrder(_Products, _repository));
         }
 
         private void OrdersBtn_Click(object sender, EventArgs e)

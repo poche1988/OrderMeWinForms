@@ -58,6 +58,18 @@ namespace OrderMe.DAL
             return products;
         }
         #endregion
+
+        #region orders
+
+        public void CreateOrder(Order order)
+        {
+            _Context.Orders.Add(order);
+            _Context.SaveChanges();
+        }
+        #endregion
+
+        
+
     }
 
 
