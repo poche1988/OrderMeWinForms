@@ -62,7 +62,10 @@ namespace OrderMe.DAL
         #region orders
         public List<Order> GetOrders()
         {
-            return _Context.Orders.Include(o => o.OrderDetails).ToList();
+            return _Context.Orders
+                .Include(o => o.OrderDetails)
+                .OrderByDescending(o=>o.Date)
+                .ToList();
         }
 
         public void CreateOrder(Order order)

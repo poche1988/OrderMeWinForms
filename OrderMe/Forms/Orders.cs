@@ -21,6 +21,30 @@ namespace OrderMe.Forms
             _Orders = order;
             _repository = repo;
             InitializeComponent();
+            loadOrderGrid(_Orders);
+        }
+
+        void loadOrderGrid(List<Order> orders)
+        {
+            if (orders.Count > 0)
+            {
+                foreach (var order in orders)
+                {
+                    DataGridViewRow row = (DataGridViewRow)OrderGrid.Rows[0].Clone();
+                    row.Cells[0].Value = order.Date.ToString("dd-MM-yyyy");
+                    row.Cells[1].Value = order.OrderStatus;
+
+                    OrderGrid.Rows.Add(row);
+                }
+            }
+
+            else
+            {
+                OrderGrid.Visible = false;
+                NoOrdersLabel.Visible = true;
+                this.Update();
+            }
+
         }
     }
 }

@@ -229,9 +229,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 21);
+            this.label1.Size = new System.Drawing.Size(207, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Order Me";
+            this.label1.Text = "Order Me - Otis and Louie";
             // 
             // bunifuDragControl1
             // 

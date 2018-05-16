@@ -67,10 +67,13 @@ namespace OrderMe.Forms
                     od.Product = _products.Where(p => p.SKU == row.Cells[2].Value).FirstOrDefault();
 
                     if (row.Cells[4].Value != null && Int32.TryParse(row.Cells[4].Value.ToString(), out number))
+                    {
                         od.Quantity = Convert.ToInt32(row.Cells[4].Value.ToString());
-                    else
-                        od.Quantity = 0;
-                    order.AddDetail(od);
+                        order.AddDetail(od);
+                    }
+                    //else
+                    //    od.Quantity = 0;
+                    //order.AddDetail(od);
                 }
             }
             showCreatingMessage();
