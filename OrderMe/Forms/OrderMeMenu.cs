@@ -10,13 +10,15 @@ namespace OrderMe.Forms
     {
         private Repository _repository;
         private List<Product> _Products;
+        private List<Order> _Orders;
 
         public OrderMeMenu()
         {
             InitializeComponent();
             _repository = Repository.GetInstance();
             _Products = _repository.Getproducts();
-            OpenFormInContainer(new NewOrder(_Products, _repository));
+            _Orders = _repository.GetOrders();
+            OpenFormInContainer(new NewOrder(_Products, _repository,this));
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace OrderMe.Forms
             }
         }
 
-        private void OpenFormInContainer(object form)
+        public void OpenFormInContainer(object form)
         {
             if (this.FormContainer.Controls.Count > 0)
                 this.FormContainer.Controls.RemoveAt(0);
@@ -54,14 +56,20 @@ namespace OrderMe.Forms
 
         }
 
+        public void UpdateOrdersList()
+        {
+            _Orders = _repository.GetOrders();
+            OpenFormInContainer(new Orders(_Orders, _repository));
+        }
+
         private void NewOrderBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new NewOrder(_Products, _repository));
+            OpenFormInContainer(new NewOrder(_Products, _repository, this));
         }
 
         private void OrdersBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new Orders());
+            OpenFormInContainer(new Orders(_Orders, _repository));
         }
 
         private void ProductsBtn_Click(object sender, EventArgs e)

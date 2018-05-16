@@ -16,10 +16,13 @@ namespace OrderMe.Forms
     {
         private List<Product> _products;
         private readonly Repository _repository;
-        public NewOrder(List<Product> products, Repository repo)
+        private readonly OrderMeMenu _form;
+
+        public NewOrder(List<Product> products, Repository repo, OrderMeMenu form)
         {
             _repository = repo;
             _products = products;
+            _form = form;
             InitializeComponent();
             DateTxtBox.Text = DateTime.Today.ToString("dd/MM/yyyy");
             loadProductsGrid(_products);
@@ -70,8 +73,17 @@ namespace OrderMe.Forms
                     order.AddDetail(od);
                 }
             }
-
+            showCreatingMessage();
             _repository.CreateOrder(order);
+            _form.UpdateOrdersList();
+        }
+
+        private void showCreatingMessage()
+        {
+            CreatinMsgPanel.Visible = true;
+            this.Update();
+            Cursor.Current = Cursors.WaitCursor;
+            
         }
     }
 }

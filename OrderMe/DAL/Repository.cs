@@ -60,6 +60,10 @@ namespace OrderMe.DAL
         #endregion
 
         #region orders
+        public List<Order> GetOrders()
+        {
+            return _Context.Orders.Include(o => o.OrderDetails).ToList();
+        }
 
         public void CreateOrder(Order order)
         {

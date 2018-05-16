@@ -307,7 +307,7 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuFlatButton ProductsBtn;
         private Bunifu.Framework.UI.BunifuFlatButton OrdersBtn;
-        private System.Windows.Forms.Panel FormContainer;
         private BunifuAnimatorNS.BunifuTransition tShow;
+        public System.Windows.Forms.Panel FormContainer;
     }
 }
