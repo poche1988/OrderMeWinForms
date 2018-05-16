@@ -63,6 +63,7 @@ namespace OrderMe.DAL
         public List<Order> GetOrders()
         {
             return _Context.Orders
+                .Where(o=>o.OrderStatus != OrderState.Deleted)
                 .Include(o => o.OrderDetails)
                 .OrderByDescending(o=>o.Date)
                 .ToList();
@@ -71,6 +72,13 @@ namespace OrderMe.DAL
         public void CreateOrder(Order order)
         {
             _Context.Orders.Add(order);
+            _Context.SaveChanges();
+        }
+
+        public void DeleteOrder(int id)
+        {
+            var order = _Context.Orders.Where(o => o.OrderId == id).FirstOrDefault();
+            order.OrderStatus = OrderState.Deleted;
             _Context.SaveChanges();
         }
         #endregion

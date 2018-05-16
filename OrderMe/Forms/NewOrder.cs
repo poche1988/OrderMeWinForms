@@ -48,7 +48,7 @@ namespace OrderMe.Forms
         private void CreateOrderBtn_Click(object sender, EventArgs e)
         {
             int number;
-
+            
             Order order = new Order {
                 Date = DateTime.Today,
                 Company = CompanyTxtBox.Text,
@@ -87,6 +87,14 @@ namespace OrderMe.Forms
             this.Update();
             Cursor.Current = Cursors.WaitCursor;
             
+        }
+
+        private void ProductsGrid_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (ProductsGrid.IsCurrentCellDirty)
+            {
+                ProductsGrid.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
     }
 }

@@ -17,10 +17,12 @@ namespace OrderMe.Forms
     {
         private List<Order> _Orders;
         private readonly Repository _repository;
-        public Orders(List<Order> order, Repository repo)
+        private OrderMeMenu _form;
+        public Orders(List<Order> order, Repository repo, OrderMeMenu form)
         {
             _Orders = order;
             _repository = repo;
+            _form = form;
             InitializeComponent();
             loadOrderGrid(_Orders);
         }
@@ -44,6 +46,8 @@ namespace OrderMe.Forms
             else
             {
                 OrderGrid.Visible = false;
+                OrderDetailsGrid.Visible = false;
+                DeleteOrderBtn.Visible = false;
                 NoOrdersLabel.Visible = true;
                 this.Update();
             }
@@ -52,25 +56,28 @@ namespace OrderMe.Forms
 
         private void loadOrderDetailsGrid()
         {
-            DataGridViewRow row = this.OrderGrid.SelectedRows[0];
-
-            if (row.Cells["Id"].Value != null)
+            if (OrderGrid.Rows.Count > 0)
             {
-                OrderDetailsGrid.Rows.Clear();
-
-                var orderdetails = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value))
-                    .Select(o => o.OrderDetails).ToList();
-                    
-                if (orderdetails[0].Count > 0)
+                var x = OrderGrid.SelectedRows[0].Cells["Id"].Value;
+                if (OrderGrid.SelectedRows[0].Cells["Id"].Value != null)
                 {
-                    foreach (OrderDetail od in orderdetails[0])
-                    {
-                        DataGridViewRow rowod = (DataGridViewRow)OrderDetailsGrid.Rows[0].Clone();
-                        rowod.Cells[0].Value = od.Product.Category.Brand.Name;
-                        rowod.Cells[1].Value = od.Product.Category.Name + " " + od.Product.ProductName;
-                        rowod.Cells[2].Value = od.Quantity;
+                    DataGridViewRow row = this.OrderGrid.SelectedRows[0];
+                    OrderDetailsGrid.Rows.Clear();
 
-                        OrderDetailsGrid.Rows.Add(rowod);
+                    var orderdetails = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value))
+                        .Select(o => o.OrderDetails).ToList();
+
+                    if (orderdetails[0].Count > 0)
+                    {
+                        foreach (OrderDetail od in orderdetails[0])
+                        {
+                            DataGridViewRow rowod = (DataGridViewRow)OrderDetailsGrid.Rows[0].Clone();
+                            rowod.Cells[0].Value = od.Product.Category.Brand.Name;
+                            rowod.Cells[1].Value = od.Product.Category.Name + " " + od.Product.ProductName;
+                            rowod.Cells[2].Value = od.Quantity;
+
+                            OrderDetailsGrid.Rows.Add(rowod);
+                        }
                     }
                 }
                 
@@ -81,5 +88,21 @@ namespace OrderMe.Forms
         {
             loadOrderDetailsGrid();
         }
+
+        private void DeleteOrderBtn_Click(object sender, EventArgs e)
+        {
+
+
+            DataGridViewRow row = this.OrderGrid.SelectedRows[0];
+
+            if (row.Cells["Id"].Value != null)
+            {
+                var id = Convert.ToInt32(row.Cells["Id"].Value);
+                Cursor.Current = Cursors.WaitCursor;
+                _repository.DeleteOrder(id);
+                _form.UpdateOrdersList();
+            }
+        }
+
     }
 }

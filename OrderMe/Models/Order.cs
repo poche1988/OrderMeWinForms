@@ -37,6 +37,7 @@ namespace OrderMe.Models
     public enum OrderState
     {
         Created,
-        Sent
+        Sent,
+        Deleted
     }
 }

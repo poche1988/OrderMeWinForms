@@ -65,7 +65,7 @@
             this.sideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenu.Location = new System.Drawing.Point(0, 36);
             this.sideMenu.Name = "sideMenu";
-            this.sideMenu.Size = new System.Drawing.Size(50, 564);
+            this.sideMenu.Size = new System.Drawing.Size(50, 664);
             this.sideMenu.TabIndex = 0;
             // 
             // ProductsBtn
@@ -201,7 +201,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1000, 36);
+            this.Header.Size = new System.Drawing.Size(1200, 36);
             this.Header.TabIndex = 1;
             // 
             // CloseBtn
@@ -212,7 +212,7 @@
             this.tShow.SetDecoration(this.CloseBtn, BunifuAnimatorNS.DecorationType.None);
             this.CloseBtn.Image = ((System.Drawing.Image)(resources.GetObject("CloseBtn.Image")));
             this.CloseBtn.ImageActive = null;
-            this.CloseBtn.Location = new System.Drawing.Point(973, 9);
+            this.CloseBtn.Location = new System.Drawing.Point(1173, 9);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.Size = new System.Drawing.Size(15, 15);
             this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +247,7 @@
             this.FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FormContainer.Location = new System.Drawing.Point(50, 36);
             this.FormContainer.Name = "FormContainer";
-            this.FormContainer.Size = new System.Drawing.Size(950, 564);
+            this.FormContainer.Size = new System.Drawing.Size(1150, 664);
             this.FormContainer.TabIndex = 2;
             // 
             // tShow
@@ -276,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.FormContainer);
             this.Controls.Add(this.sideMenu);
             this.Controls.Add(this.Header);

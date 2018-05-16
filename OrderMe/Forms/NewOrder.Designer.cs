@@ -1,4 +1,6 @@
-﻿namespace OrderMe.Forms
+﻿using System.Drawing;
+
+namespace OrderMe.Forms
 {
     partial class NewOrder
     {
@@ -28,8 +30,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewOrder));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,15 +43,15 @@
             this.DateLabel = new System.Windows.Forms.Label();
             this.DateTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ProductsGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.creatingMsg = new System.Windows.Forms.Label();
+            this.CreatinMsgPanel = new System.Windows.Forms.Panel();
             this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.creatingMsg = new System.Windows.Forms.Label();
-            this.CreatinMsgPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -161,22 +164,22 @@
             // ProductsGrid
             // 
             this.ProductsGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ProductsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProductsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProductsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.brand,
@@ -184,6 +187,14 @@
             this.SKU,
             this.productname,
             this.quantity});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductsGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.ProductsGrid.DoubleBuffered = true;
             this.ProductsGrid.EnableHeadersVisualStyles = false;
             this.ProductsGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -191,39 +202,9 @@
             this.ProductsGrid.Location = new System.Drawing.Point(16, 103);
             this.ProductsGrid.Name = "ProductsGrid";
             this.ProductsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ProductsGrid.Size = new System.Drawing.Size(776, 349);
+            this.ProductsGrid.Size = new System.Drawing.Size(976, 449);
             this.ProductsGrid.TabIndex = 14;
-            // 
-            // brand
-            // 
-            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.brand.HeaderText = "Brand";
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 65;
-            // 
-            // categoryname
-            // 
-            this.categoryname.HeaderText = "Product";
-            this.categoryname.Name = "categoryname";
-            this.categoryname.ReadOnly = true;
-            // 
-            // SKU
-            // 
-            this.SKU.HeaderText = "SKU";
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            // 
-            // productname
-            // 
-            this.productname.HeaderText = "Size";
-            this.productname.Name = "productname";
-            this.productname.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
+            this.ProductsGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.ProductsGrid_CurrentCellDirtyStateChanged);
             // 
             // CreateOrderBtn
             // 
@@ -246,7 +227,7 @@
             this.CreateOrderBtn.IconVisible = true;
             this.CreateOrderBtn.IconZoom = 90D;
             this.CreateOrderBtn.IsTab = false;
-            this.CreateOrderBtn.Location = new System.Drawing.Point(29, 487);
+            this.CreateOrderBtn.Location = new System.Drawing.Point(27, 604);
             this.CreateOrderBtn.Name = "CreateOrderBtn";
             this.CreateOrderBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.CreateOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -281,7 +262,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 50D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(289, 487);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(299, 604);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -309,17 +290,50 @@
             this.CreatinMsgPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CreatinMsgPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CreatinMsgPanel.Controls.Add(this.creatingMsg);
-            this.CreatinMsgPanel.Location = new System.Drawing.Point(273, 209);
+            this.CreatinMsgPanel.Location = new System.Drawing.Point(399, 235);
             this.CreatinMsgPanel.Name = "CreatinMsgPanel";
             this.CreatinMsgPanel.Size = new System.Drawing.Size(314, 107);
             this.CreatinMsgPanel.TabIndex = 18;
             this.CreatinMsgPanel.Visible = false;
             // 
+            // brand
+            // 
+            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.brand.HeaderText = "Brand";
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 73;
+            // 
+            // categoryname
+            // 
+            this.categoryname.FillWeight = 200F;
+            this.categoryname.HeaderText = "Product";
+            this.categoryname.Name = "categoryname";
+            this.categoryname.ReadOnly = true;
+            this.categoryname.Width = 200;
+            // 
+            // SKU
+            // 
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            // 
+            // productname
+            // 
+            this.productname.HeaderText = "Size";
+            this.productname.Name = "productname";
+            this.productname.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 564);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.CreatinMsgPanel);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.CreateOrderBtn);
@@ -354,14 +368,14 @@
         private System.Windows.Forms.Label DateLabel;
         private Bunifu.Framework.UI.BunifuMetroTextbox DateTxtBox;
         private Bunifu.Framework.UI.BunifuCustomDataGrid ProductsGrid;
+        private Bunifu.Framework.UI.BunifuFlatButton CreateOrderBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.Label creatingMsg;
+        private System.Windows.Forms.Panel CreatinMsgPanel;
         private System.Windows.Forms.DataGridViewTextBoxColumn brand;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryname;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private Bunifu.Framework.UI.BunifuFlatButton CreateOrderBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.Label creatingMsg;
-        private System.Windows.Forms.Panel CreatinMsgPanel;
     }
 }

@@ -59,7 +59,7 @@ namespace OrderMe.Forms
         public void UpdateOrdersList()
         {
             _Orders = _repository.GetOrders();
-            OpenFormInContainer(new Orders(_Orders, _repository));
+            OpenFormInContainer(new Orders(_Orders, _repository, this));
         }
 
         private void NewOrderBtn_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace OrderMe.Forms
 
         private void OrdersBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new Orders(_Orders, _repository));
+            OpenFormInContainer(new Orders(_Orders, _repository, this));
         }
 
         private void ProductsBtn_Click(object sender, EventArgs e)
