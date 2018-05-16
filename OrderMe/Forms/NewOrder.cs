@@ -65,7 +65,7 @@ namespace OrderMe.Forms
                 if (row.Cells[2].Value != null)
                 {
                     od.Product = _products.Where(p => p.SKU == row.Cells[2].Value).FirstOrDefault();
-
+                    var x = row.Cells[4].Value;
                     if (row.Cells[4].Value != null && Int32.TryParse(row.Cells[4].Value.ToString(), out number))
                     {
                         od.Quantity = Convert.ToInt32(row.Cells[4].Value.ToString());
