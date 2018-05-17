@@ -43,15 +43,15 @@ namespace OrderMe.Forms
             this.DateLabel = new System.Windows.Forms.Label();
             this.DateTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ProductsGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.creatingMsg = new System.Windows.Forms.Label();
-            this.CreatinMsgPanel = new System.Windows.Forms.Panel();
             this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.creatingMsg = new System.Windows.Forms.Label();
+            this.CreatinMsgPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -205,6 +205,40 @@ namespace OrderMe.Forms
             this.ProductsGrid.Size = new System.Drawing.Size(976, 449);
             this.ProductsGrid.TabIndex = 14;
             this.ProductsGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.ProductsGrid_CurrentCellDirtyStateChanged);
+            this.ProductsGrid.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ProductsGrid_EditingControlShowing);
+            // 
+            // brand
+            // 
+            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.brand.HeaderText = "Brand";
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 73;
+            // 
+            // categoryname
+            // 
+            this.categoryname.FillWeight = 200F;
+            this.categoryname.HeaderText = "Product";
+            this.categoryname.Name = "categoryname";
+            this.categoryname.ReadOnly = true;
+            this.categoryname.Width = 200;
+            // 
+            // SKU
+            // 
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            // 
+            // productname
+            // 
+            this.productname.HeaderText = "Size";
+            this.productname.Name = "productname";
+            this.productname.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
             // 
             // CreateOrderBtn
             // 
@@ -295,39 +329,6 @@ namespace OrderMe.Forms
             this.CreatinMsgPanel.Size = new System.Drawing.Size(314, 107);
             this.CreatinMsgPanel.TabIndex = 18;
             this.CreatinMsgPanel.Visible = false;
-            // 
-            // brand
-            // 
-            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.brand.HeaderText = "Brand";
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 73;
-            // 
-            // categoryname
-            // 
-            this.categoryname.FillWeight = 200F;
-            this.categoryname.HeaderText = "Product";
-            this.categoryname.Name = "categoryname";
-            this.categoryname.ReadOnly = true;
-            this.categoryname.Width = 200;
-            // 
-            // SKU
-            // 
-            this.SKU.HeaderText = "SKU";
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            // 
-            // productname
-            // 
-            this.productname.HeaderText = "Size";
-            this.productname.Name = "productname";
-            this.productname.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
             // 
             // NewOrder
             // 

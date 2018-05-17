@@ -38,26 +38,27 @@ namespace OrderMe.Forms
                 row.Cells[2].Value = product.SKU;
                 row.Cells[3].Value = product.ProductName;
                 //row.Cells[4].Value = "0";
-                
+
                 ProductsGrid.Rows.Add(row);
             }
 
-           
+
         }
 
         private void CreateOrderBtn_Click(object sender, EventArgs e)
         {
             int number;
-            
-            Order order = new Order {
+
+            Order order = new Order
+            {
                 Date = DateTime.Today,
                 Company = CompanyTxtBox.Text,
                 Contact = ContactTxtBox.Text,
                 OrderStatus = OrderState.Created
             };
 
-            
-            
+
+
             foreach (DataGridViewRow row in ProductsGrid.Rows)
             {
                 OrderDetail od = new OrderDetail();
@@ -71,9 +72,7 @@ namespace OrderMe.Forms
                         od.Quantity = Convert.ToInt32(row.Cells[4].Value.ToString());
                         order.AddDetail(od);
                     }
-                    //else
-                    //    od.Quantity = 0;
-                    //order.AddDetail(od);
+                    
                 }
             }
             showCreatingMessage();
@@ -86,15 +85,35 @@ namespace OrderMe.Forms
             CreatinMsgPanel.Visible = true;
             this.Update();
             Cursor.Current = Cursors.WaitCursor;
-            
+
         }
 
+        //to take the value in editing mode when you click on create or sumbit order
         private void ProductsGrid_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             if (ProductsGrid.IsCurrentCellDirty)
             {
                 ProductsGrid.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
+        }
+
+        //only numbers in Quantity column
+        private void ProductsGrid_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+
+            e.Control.KeyPress += new KeyPressEventHandler(Control_KeyPress);
+
+        }
+
+        private void Control_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            
         }
     }
 }
