@@ -97,10 +97,19 @@ namespace OrderMe.Forms
 
             if (row.Cells["Id"].Value != null)
             {
-                var id = Convert.ToInt32(row.Cells["Id"].Value);
-                Cursor.Current = Cursors.WaitCursor;
-                _repository.DeleteOrder(id);
-                _form.UpdateOrdersList();
+                DialogResult result = MessageBox.Show("You are deleting an order. Are you sure?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result.Equals(DialogResult.OK))
+                {
+                    var id = Convert.ToInt32(row.Cells["Id"].Value);
+                    Cursor.Current = Cursors.WaitCursor;
+                    _repository.DeleteOrder(id);
+                    _form.UpdateOrdersList();
+                }
+                else
+                {
+                    //do something
+                }
+                
             }
         }
 

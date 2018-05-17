@@ -50,6 +50,7 @@ namespace OrderMe.Forms
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.SubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
             this.SuspendLayout();
@@ -216,12 +217,14 @@ namespace OrderMe.Forms
             // DeleteOrderBtn
             // 
             this.DeleteOrderBtn.Activecolor = System.Drawing.Color.Red;
-            this.DeleteOrderBtn.BackColor = System.Drawing.Color.Red;
+            this.DeleteOrderBtn.BackColor = System.Drawing.Color.White;
             this.DeleteOrderBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteOrderBtn.BorderRadius = 0;
-            this.DeleteOrderBtn.ButtonText = "Delete Order";
+            this.DeleteOrderBtn.BorderRadius = 1;
+            this.DeleteOrderBtn.ButtonText = "  Delete Order";
             this.DeleteOrderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteOrderBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.DeleteOrderBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteOrderBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DeleteOrderBtn.Iconcolor = System.Drawing.Color.Transparent;
             this.DeleteOrderBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("DeleteOrderBtn.Iconimage")));
             this.DeleteOrderBtn.Iconimage_right = null;
@@ -232,27 +235,64 @@ namespace OrderMe.Forms
             this.DeleteOrderBtn.IconRightVisible = true;
             this.DeleteOrderBtn.IconRightZoom = 0D;
             this.DeleteOrderBtn.IconVisible = true;
-            this.DeleteOrderBtn.IconZoom = 60D;
+            this.DeleteOrderBtn.IconZoom = 40D;
             this.DeleteOrderBtn.IsTab = false;
             this.DeleteOrderBtn.Location = new System.Drawing.Point(958, 64);
             this.DeleteOrderBtn.Name = "DeleteOrderBtn";
-            this.DeleteOrderBtn.Normalcolor = System.Drawing.Color.Red;
-            this.DeleteOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DeleteOrderBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.DeleteOrderBtn.Normalcolor = System.Drawing.Color.White;
+            this.DeleteOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.DeleteOrderBtn.OnHoverTextColor = System.Drawing.Color.DarkRed;
             this.DeleteOrderBtn.selected = false;
-            this.DeleteOrderBtn.Size = new System.Drawing.Size(146, 48);
+            this.DeleteOrderBtn.Size = new System.Drawing.Size(180, 48);
             this.DeleteOrderBtn.TabIndex = 16;
-            this.DeleteOrderBtn.Text = "Delete Order";
+            this.DeleteOrderBtn.Text = "  Delete Order";
             this.DeleteOrderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteOrderBtn.Textcolor = System.Drawing.Color.White;
-            this.DeleteOrderBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteOrderBtn.Textcolor = System.Drawing.Color.DarkRed;
+            this.DeleteOrderBtn.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteOrderBtn.Click += new System.EventHandler(this.DeleteOrderBtn_Click);
+            // 
+            // SubmitBtn
+            // 
+            this.SubmitBtn.Activecolor = System.Drawing.Color.Red;
+            this.SubmitBtn.BackColor = System.Drawing.Color.White;
+            this.SubmitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SubmitBtn.BorderRadius = 0;
+            this.SubmitBtn.ButtonText = "  Submit Order";
+            this.SubmitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubmitBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.SubmitBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubmitBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.SubmitBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("SubmitBtn.Iconimage")));
+            this.SubmitBtn.Iconimage_right = null;
+            this.SubmitBtn.Iconimage_right_Selected = null;
+            this.SubmitBtn.Iconimage_Selected = null;
+            this.SubmitBtn.IconMarginLeft = 0;
+            this.SubmitBtn.IconMarginRight = 0;
+            this.SubmitBtn.IconRightVisible = true;
+            this.SubmitBtn.IconRightZoom = 0D;
+            this.SubmitBtn.IconVisible = true;
+            this.SubmitBtn.IconZoom = 35D;
+            this.SubmitBtn.IsTab = false;
+            this.SubmitBtn.Location = new System.Drawing.Point(958, 128);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Normalcolor = System.Drawing.Color.White;
+            this.SubmitBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.SubmitBtn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubmitBtn.selected = false;
+            this.SubmitBtn.Size = new System.Drawing.Size(180, 48);
+            this.SubmitBtn.TabIndex = 17;
+            this.SubmitBtn.Text = "  Submit Order";
+            this.SubmitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubmitBtn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubmitBtn.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.DeleteOrderBtn);
             this.Controls.Add(this.OrderDetailsGrid);
             this.Controls.Add(this.panel2);
@@ -285,5 +325,6 @@ namespace OrderMe.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private Bunifu.Framework.UI.BunifuFlatButton DeleteOrderBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton SubmitBtn;
     }
 }
