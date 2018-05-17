@@ -40,7 +40,15 @@ namespace OrderMe.Forms
 
                     OrderGrid.Rows.Add(row);
                 }
-                OrderGrid.Rows[0].Selected = true;
+                //OrderGrid.Rows[0].Selected = true;
+                OrderGrid.Visible = true;
+                OrderDetailsGrid.Visible = true;
+                DeleteOrderBtn.Visible = true;
+                NoOrdersLabel.Visible = false;
+                odLine.Visible = true;
+                OrderDetailsLbl.Visible = true;
+                SubmitBtn.Visible = true;
+                this.Update();
             }
 
             else
@@ -61,34 +69,40 @@ namespace OrderMe.Forms
         {
             if (OrderGrid.Rows.Count > 0)
             {
-                var x = OrderGrid.SelectedRows[0].Cells["Id"].Value;
-                if (OrderGrid.SelectedRows[0].Cells["Id"].Value != null)
+                try
                 {
-                    DataGridViewRow row = this.OrderGrid.SelectedRows[0];
-                    OrderDetailsGrid.Rows.Clear();
-
-                    var orderdetails = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value))
-                        .Select(o => o.OrderDetails).ToList();
-
-                    if (orderdetails[0].Count > 0)
+                    if (OrderGrid.SelectedRows[0].Cells["Id"].Value != null)
                     {
-                        foreach (OrderDetail od in orderdetails[0])
+                        DataGridViewRow row = this.OrderGrid.SelectedRows[0];
+                        OrderDetailsGrid.Rows.Clear();
+
+                        var orderdetails = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value))
+                            .Select(o => o.OrderDetails).ToList();
+
+                        if (orderdetails[0].Count > 0)
                         {
-                            DataGridViewRow rowod = (DataGridViewRow)OrderDetailsGrid.Rows[0].Clone();
-                            rowod.Cells[0].Value = od.Product.Category.Brand.Name;
-                            rowod.Cells[1].Value = od.Product.Category.Name + " " + od.Product.ProductName;
-                            rowod.Cells[2].Value = od.Quantity;
+                            foreach (OrderDetail od in orderdetails[0])
+                            {
+                                DataGridViewRow rowod = (DataGridViewRow)OrderDetailsGrid.Rows[0].Clone();
+                                rowod.Cells[0].Value = od.Product.Category.Brand.Name;
+                                rowod.Cells[1].Value = od.Product.Category.Name + " " + od.Product.ProductName;
+                                rowod.Cells[2].Value = od.Quantity;
 
-                            OrderDetailsGrid.Rows.Add(rowod);
+                                OrderDetailsGrid.Rows.Add(rowod);
+                            }
                         }
-                    }
 
-                    if (row.Cells["Status"].Value.ToString() == "Sent")
-                        SubmitBtn.Enabled = false;
-                    else
-                        SubmitBtn.Enabled = true;
+                        if (row.Cells["Status"].Value.ToString() == "Sent")
+                            SubmitBtn.Enabled = false;
+                        else
+                            SubmitBtn.Enabled = true;
+                    }
                 }
-                
+                catch
+                {
+                    // do something
+                }
+
             }
         }
 
@@ -117,9 +131,18 @@ namespace OrderMe.Forms
                 {
                     //do something
                 }
-                
+
             }
         }
 
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            if (dateFrom.Value != null && DateTo.Value != null & dateFrom.Value.Date <= DateTo.Value.Date)
+            {
+                OrderGrid.Rows.Clear();
+                List<Order> orders = _Orders.Where(o => o.Date.Date >= dateFrom.Value.Date && o.Date.Date <= DateTo.Value.Date).ToList();
+                loadOrderGrid(orders);
+            }
+        }
     }
 }

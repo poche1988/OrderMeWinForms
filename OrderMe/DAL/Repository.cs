@@ -65,7 +65,7 @@ namespace OrderMe.DAL
             return _Context.Orders
                 .Where(o=>o.OrderStatus != OrderState.Deleted)
                 .Include(o => o.OrderDetails)
-                .OrderByDescending(o=>o.Date)
+                .OrderByDescending(o=>o.OrderId)
                 .ToList();
         }
 

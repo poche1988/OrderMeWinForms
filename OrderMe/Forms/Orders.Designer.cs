@@ -53,8 +53,14 @@ namespace OrderMe.Forms
             this.SubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.OrderDetailsLbl = new System.Windows.Forms.Label();
             this.odLine = new System.Windows.Forms.Panel();
+            this.dateFrom = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.DateTo = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.datefromlbl = new System.Windows.Forms.Label();
+            this.datetolbl = new System.Windows.Forms.Label();
+            this.SearchBtn = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +102,7 @@ namespace OrderMe.Forms
             this.Id,
             this.Date,
             this.Status});
+            this.OrderGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.5F);
@@ -139,7 +146,7 @@ namespace OrderMe.Forms
             // 
             this.NoOrdersLabel.AutoSize = true;
             this.NoOrdersLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoOrdersLabel.Location = new System.Drawing.Point(28, 64);
+            this.NoOrdersLabel.Location = new System.Drawing.Point(821, 48);
             this.NoOrdersLabel.Name = "NoOrdersLabel";
             this.NoOrdersLabel.Size = new System.Drawing.Size(120, 22);
             this.NoOrdersLabel.TabIndex = 6;
@@ -149,7 +156,7 @@ namespace OrderMe.Forms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel2.Location = new System.Drawing.Point(419, 64);
+            this.panel2.Location = new System.Drawing.Point(419, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2, 584);
             this.panel2.TabIndex = 7;
@@ -175,6 +182,7 @@ namespace OrderMe.Forms
             this.Brand,
             this.Product,
             this.Quantity});
+            this.OrderDetailsGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.5F);
@@ -308,11 +316,80 @@ namespace OrderMe.Forms
             this.odLine.Size = new System.Drawing.Size(950, 2);
             this.odLine.TabIndex = 5;
             // 
+            // dateFrom
+            // 
+            this.dateFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.dateFrom.BorderRadius = 0;
+            this.dateFrom.ForeColor = System.Drawing.Color.White;
+            this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateFrom.FormatCustom = null;
+            this.dateFrom.Location = new System.Drawing.Point(116, 42);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(281, 36);
+            this.dateFrom.TabIndex = 19;
+            this.dateFrom.Value = new System.DateTime(2018, 5, 18, 9, 30, 13, 150);
+            // 
+            // DateTo
+            // 
+            this.DateTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DateTo.BorderRadius = 0;
+            this.DateTo.ForeColor = System.Drawing.Color.White;
+            this.DateTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTo.FormatCustom = null;
+            this.DateTo.Location = new System.Drawing.Point(437, 42);
+            this.DateTo.Name = "DateTo";
+            this.DateTo.Size = new System.Drawing.Size(281, 36);
+            this.DateTo.TabIndex = 20;
+            this.DateTo.Value = new System.DateTime(2018, 5, 18, 9, 30, 13, 150);
+            // 
+            // datefromlbl
+            // 
+            this.datefromlbl.AutoSize = true;
+            this.datefromlbl.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.datefromlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.datefromlbl.Location = new System.Drawing.Point(56, 48);
+            this.datefromlbl.Name = "datefromlbl";
+            this.datefromlbl.Size = new System.Drawing.Size(54, 22);
+            this.datefromlbl.TabIndex = 21;
+            this.datefromlbl.Text = "From";
+            // 
+            // datetolbl
+            // 
+            this.datetolbl.AutoSize = true;
+            this.datetolbl.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.datetolbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.datetolbl.Location = new System.Drawing.Point(401, 48);
+            this.datetolbl.Name = "datetolbl";
+            this.datetolbl.Size = new System.Drawing.Size(30, 22);
+            this.datetolbl.TabIndex = 22;
+            this.datetolbl.Text = "To";
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SearchBtn.ErrorImage")));
+            this.SearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("SearchBtn.Image")));
+            this.SearchBtn.ImageActive = null;
+            this.SearchBtn.Location = new System.Drawing.Point(755, 42);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(42, 36);
+            this.SearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SearchBtn.TabIndex = 23;
+            this.SearchBtn.TabStop = false;
+            this.SearchBtn.Zoom = 10;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.datetolbl);
+            this.Controls.Add(this.datefromlbl);
+            this.Controls.Add(this.DateTo);
+            this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.odLine);
             this.Controls.Add(this.OrderDetailsLbl);
             this.Controls.Add(this.SubmitBtn);
@@ -328,6 +405,7 @@ namespace OrderMe.Forms
             this.Text = "Orders";
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +429,10 @@ namespace OrderMe.Forms
         private Bunifu.Framework.UI.BunifuFlatButton SubmitBtn;
         private System.Windows.Forms.Label OrderDetailsLbl;
         private System.Windows.Forms.Panel odLine;
+        private Bunifu.Framework.UI.BunifuDatepicker dateFrom;
+        private Bunifu.Framework.UI.BunifuDatepicker DateTo;
+        private System.Windows.Forms.Label datefromlbl;
+        private System.Windows.Forms.Label datetolbl;
+        private Bunifu.Framework.UI.BunifuImageButton SearchBtn;
     }
 }
