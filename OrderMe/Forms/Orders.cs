@@ -49,6 +49,9 @@ namespace OrderMe.Forms
                 OrderDetailsGrid.Visible = false;
                 DeleteOrderBtn.Visible = false;
                 NoOrdersLabel.Visible = true;
+                odLine.Visible = false;
+                OrderDetailsLbl.Visible = false;
+                SubmitBtn.Visible = false;
                 this.Update();
             }
 
@@ -79,6 +82,11 @@ namespace OrderMe.Forms
                             OrderDetailsGrid.Rows.Add(rowod);
                         }
                     }
+
+                    if (row.Cells["Status"].Value.ToString() == "Sent")
+                        SubmitBtn.Enabled = false;
+                    else
+                        SubmitBtn.Enabled = true;
                 }
                 
             }

@@ -29,7 +29,8 @@ namespace OrderMe
 //por hacer
 /*
  * quantity q solo acepte numeros // listo
- * Delete buton q pregunte si estas seguro //
+ * Delete buton q pregunte si estas seguro // listo
+ * si esta enviado deshabilita boton enviar // listo
  * filtrar ordenes por fecha
  * email sender
  * boton create and submit

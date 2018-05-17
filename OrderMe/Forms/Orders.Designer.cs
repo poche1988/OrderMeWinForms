@@ -51,6 +51,8 @@ namespace OrderMe.Forms
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.OrderDetailsLbl = new System.Windows.Forms.Label();
+            this.odLine = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
             this.SuspendLayout();
@@ -106,12 +108,12 @@ namespace OrderMe.Forms
             this.OrderGrid.EnableHeadersVisualStyles = false;
             this.OrderGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.OrderGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.OrderGrid.Location = new System.Drawing.Point(2, 64);
+            this.OrderGrid.Location = new System.Drawing.Point(2, 113);
             this.OrderGrid.Name = "OrderGrid";
             this.OrderGrid.ReadOnly = true;
             this.OrderGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.OrderGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderGrid.Size = new System.Drawing.Size(349, 472);
+            this.OrderGrid.Size = new System.Drawing.Size(382, 539);
             this.OrderGrid.TabIndex = 5;
             this.OrderGrid.SelectionChanged += new System.EventHandler(this.OrderGrid_SelectionChanged);
             // 
@@ -149,7 +151,7 @@ namespace OrderMe.Forms
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panel2.Location = new System.Drawing.Point(419, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 484);
+            this.panel2.Size = new System.Drawing.Size(2, 584);
             this.panel2.TabIndex = 7;
             // 
             // OrderDetailsGrid
@@ -185,13 +187,13 @@ namespace OrderMe.Forms
             this.OrderDetailsGrid.EnableHeadersVisualStyles = false;
             this.OrderDetailsGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.OrderDetailsGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.OrderDetailsGrid.Location = new System.Drawing.Point(494, 64);
+            this.OrderDetailsGrid.Location = new System.Drawing.Point(494, 157);
             this.OrderDetailsGrid.Name = "OrderDetailsGrid";
             this.OrderDetailsGrid.ReadOnly = true;
             this.OrderDetailsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.OrderDetailsGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.OrderDetailsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderDetailsGrid.Size = new System.Drawing.Size(458, 410);
+            this.OrderDetailsGrid.Size = new System.Drawing.Size(458, 361);
             this.OrderDetailsGrid.TabIndex = 8;
             // 
             // Brand
@@ -237,7 +239,7 @@ namespace OrderMe.Forms
             this.DeleteOrderBtn.IconVisible = true;
             this.DeleteOrderBtn.IconZoom = 40D;
             this.DeleteOrderBtn.IsTab = false;
-            this.DeleteOrderBtn.Location = new System.Drawing.Point(958, 64);
+            this.DeleteOrderBtn.Location = new System.Drawing.Point(958, 157);
             this.DeleteOrderBtn.Name = "DeleteOrderBtn";
             this.DeleteOrderBtn.Normalcolor = System.Drawing.Color.White;
             this.DeleteOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -274,7 +276,7 @@ namespace OrderMe.Forms
             this.SubmitBtn.IconVisible = true;
             this.SubmitBtn.IconZoom = 35D;
             this.SubmitBtn.IsTab = false;
-            this.SubmitBtn.Location = new System.Drawing.Point(958, 128);
+            this.SubmitBtn.Location = new System.Drawing.Point(958, 224);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Normalcolor = System.Drawing.Color.White;
             this.SubmitBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -287,11 +289,32 @@ namespace OrderMe.Forms
             this.SubmitBtn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.SubmitBtn.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // OrderDetailsLbl
+            // 
+            this.OrderDetailsLbl.AutoSize = true;
+            this.OrderDetailsLbl.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.OrderDetailsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.OrderDetailsLbl.Location = new System.Drawing.Point(490, 113);
+            this.OrderDetailsLbl.Name = "OrderDetailsLbl";
+            this.OrderDetailsLbl.Size = new System.Drawing.Size(127, 22);
+            this.OrderDetailsLbl.TabIndex = 18;
+            this.OrderDetailsLbl.Text = "Order details";
+            // 
+            // odLine
+            // 
+            this.odLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.odLine.Location = new System.Drawing.Point(494, 138);
+            this.odLine.Name = "odLine";
+            this.odLine.Size = new System.Drawing.Size(950, 2);
+            this.odLine.TabIndex = 5;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.odLine);
+            this.Controls.Add(this.OrderDetailsLbl);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.DeleteOrderBtn);
             this.Controls.Add(this.OrderDetailsGrid);
@@ -326,5 +349,7 @@ namespace OrderMe.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private Bunifu.Framework.UI.BunifuFlatButton DeleteOrderBtn;
         private Bunifu.Framework.UI.BunifuFlatButton SubmitBtn;
+        private System.Windows.Forms.Label OrderDetailsLbl;
+        private System.Windows.Forms.Panel odLine;
     }
 }
