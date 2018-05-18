@@ -248,6 +248,7 @@ namespace OrderMe.Forms
             this.DeleteOrderBtn.IconZoom = 40D;
             this.DeleteOrderBtn.IsTab = false;
             this.DeleteOrderBtn.Location = new System.Drawing.Point(958, 157);
+            this.DeleteOrderBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DeleteOrderBtn.Name = "DeleteOrderBtn";
             this.DeleteOrderBtn.Normalcolor = System.Drawing.Color.White;
             this.DeleteOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -285,6 +286,7 @@ namespace OrderMe.Forms
             this.SubmitBtn.IconZoom = 35D;
             this.SubmitBtn.IsTab = false;
             this.SubmitBtn.Location = new System.Drawing.Point(958, 224);
+            this.SubmitBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Normalcolor = System.Drawing.Color.White;
             this.SubmitBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -296,6 +298,7 @@ namespace OrderMe.Forms
             this.SubmitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubmitBtn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.SubmitBtn.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // OrderDetailsLbl
             // 

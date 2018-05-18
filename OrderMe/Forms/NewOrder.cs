@@ -1,5 +1,6 @@
 ﻿using OrderMe.DAL;
 using OrderMe.Models;
+using OrderMe.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,23 @@ namespace OrderMe.Forms
 
         private void CreateOrderBtn_Click(object sender, EventArgs e)
         {
+            Order od = createOrder(OrderState.Created);
+            _repository.CreateOrder(od);
+            _form.UpdateOrdersList();
+        }
+
+        private void createandsubmitBtn_Click(object sender, EventArgs e)
+        {
+            Order order = createOrder(OrderState.Created);
+            bool sent = EmailSender.SendEmail(order);
+            if (sent) order.OrderStatus = OrderState.Sent;
+            _repository.CreateOrder(order);
+            _form.UpdateOrdersList();
+
+        }
+
+        private Order createOrder(OrderState state)
+        {
             int number;
 
             Order order = new Order
@@ -54,7 +72,7 @@ namespace OrderMe.Forms
                 Date = DateTime.Today,
                 Company = CompanyTxtBox.Text,
                 Contact = ContactTxtBox.Text,
-                OrderStatus = OrderState.Created
+                OrderStatus = state
             };
 
 
@@ -72,12 +90,12 @@ namespace OrderMe.Forms
                         od.Quantity = Convert.ToInt32(row.Cells[4].Value.ToString());
                         order.AddDetail(od);
                     }
-                    
+
                 }
             }
             showCreatingMessage();
-            _repository.CreateOrder(order);
-            _form.UpdateOrdersList();
+
+            return order;
         }
 
         private void showCreatingMessage()
@@ -115,5 +133,7 @@ namespace OrderMe.Forms
 
             
         }
+
+        
     }
 }

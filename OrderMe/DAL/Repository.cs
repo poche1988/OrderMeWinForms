@@ -81,9 +81,16 @@ namespace OrderMe.DAL
             order.OrderStatus = OrderState.Deleted;
             _Context.SaveChanges();
         }
+
+        public void ChangeOrderStatusToSent(int id)
+        {
+            var order = _Context.Orders.Where(o => o.OrderId == id).FirstOrDefault();
+            order.OrderStatus = OrderState.Sent;
+            _Context.SaveChanges();
+        }
         #endregion
 
-        
+
 
     }
 

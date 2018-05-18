@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using OrderMe.Services;
 
 namespace OrderMe.Forms
 {
@@ -40,7 +41,6 @@ namespace OrderMe.Forms
 
                     OrderGrid.Rows.Add(row);
                 }
-                //OrderGrid.Rows[0].Selected = true;
                 OrderGrid.Visible = true;
                 OrderDetailsGrid.Visible = true;
                 DeleteOrderBtn.Visible = true;
@@ -142,6 +142,19 @@ namespace OrderMe.Forms
                 OrderGrid.Rows.Clear();
                 List<Order> orders = _Orders.Where(o => o.Date.Date >= dateFrom.Value.Date && o.Date.Date <= DateTo.Value.Date).ToList();
                 loadOrderGrid(orders);
+            }
+        }
+
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            DataGridViewRow row = this.OrderGrid.SelectedRows[0];
+            Order order = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value)).FirstOrDefault();
+            bool sent = EmailSender.SendEmail(order);
+            if (sent)
+            {
+                _repository.ChangeOrderStatusToSent(order.OrderId);
+                _form.UpdateOrdersList();
             }
         }
     }
