@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMeMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sideMenu = new System.Windows.Forms.Panel();
@@ -43,6 +43,7 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.FormContainer = new System.Windows.Forms.Panel();
             this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.DatabaseBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.sideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBtn)).BeginInit();
             this.Header.SuspendLayout();
@@ -57,6 +58,7 @@
             // sideMenu
             // 
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.sideMenu.Controls.Add(this.DatabaseBtn);
             this.sideMenu.Controls.Add(this.ProductsBtn);
             this.sideMenu.Controls.Add(this.OrdersBtn);
             this.sideMenu.Controls.Add(this.NewOrderBtn);
@@ -254,22 +256,58 @@
             // 
             this.tShow.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.tShow.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.tShow.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.tShow.DefaultAnimation = animation2;
+            // 
+            // DatabaseBtn
+            // 
+            this.DatabaseBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DatabaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.DatabaseBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatabaseBtn.BorderRadius = 0;
+            this.DatabaseBtn.ButtonText = "        Database";
+            this.DatabaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.DatabaseBtn, BunifuAnimatorNS.DecorationType.None);
+            this.DatabaseBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.DatabaseBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.DatabaseBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("DatabaseBtn.Iconimage")));
+            this.DatabaseBtn.Iconimage_right = null;
+            this.DatabaseBtn.Iconimage_right_Selected = null;
+            this.DatabaseBtn.Iconimage_Selected = null;
+            this.DatabaseBtn.IconMarginLeft = 0;
+            this.DatabaseBtn.IconMarginRight = 0;
+            this.DatabaseBtn.IconRightVisible = true;
+            this.DatabaseBtn.IconRightZoom = 0D;
+            this.DatabaseBtn.IconVisible = true;
+            this.DatabaseBtn.IconZoom = 60D;
+            this.DatabaseBtn.IsTab = true;
+            this.DatabaseBtn.Location = new System.Drawing.Point(0, 198);
+            this.DatabaseBtn.Name = "DatabaseBtn";
+            this.DatabaseBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.DatabaseBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DatabaseBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.DatabaseBtn.selected = false;
+            this.DatabaseBtn.Size = new System.Drawing.Size(200, 50);
+            this.DatabaseBtn.TabIndex = 4;
+            this.DatabaseBtn.Text = "        Database";
+            this.DatabaseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DatabaseBtn.Textcolor = System.Drawing.Color.Silver;
+            this.DatabaseBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatabaseBtn.Click += new System.EventHandler(this.DatabaseBtn_Click);
             // 
             // OrderMeMenu
             // 
@@ -309,5 +347,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton OrdersBtn;
         private BunifuAnimatorNS.BunifuTransition tShow;
         public System.Windows.Forms.Panel FormContainer;
+        private Bunifu.Framework.UI.BunifuFlatButton DatabaseBtn;
     }
 }
