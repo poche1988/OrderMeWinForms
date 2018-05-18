@@ -41,11 +41,11 @@ namespace OrderMe.Forms
             if (!string.IsNullOrEmpty(UsernameTxtBox.Text) || !string.IsNullOrEmpty(PasswordTxtBox.Text))
             {
                 string username = UsernameTxtBox.Text;
-                User user = _Users.Where(u => u.Username == username).FirstOrDefault();
+                User user = _Users.Where(u => u.Username.ToLower() == username.ToLower()).FirstOrDefault();
 
                 if (user != null)
                 {
-                    if (user.Password == PasswordTxtBox.Text)
+                    if (user.Password.ToLower() == PasswordTxtBox.Text.ToLower())
                     {
                         OrderMeMenu mm = new OrderMeMenu();
                         this.Hide();

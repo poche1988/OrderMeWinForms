@@ -31,8 +31,13 @@ namespace OrderMe
  * quantity q solo acepte numeros // listo
  * Delete buton q pregunte si estas seguro // listo
  * si esta enviado deshabilita boton enviar // listo
- * filtrar ordenes por fecha
- * email sender
- * boton create and submit
- * boton submit en listado de ordenes cuando clickeas en orden no enviada
+ * filtrar ordenes por fecha // listo
+ * email sender // listo
+ * boton create and submit // listo
+ * boton submit en listado de ordenes cuando clickeas en orden no enviada // listo
+ * 
+ * login no case sensitive // listo
+ * backup DB // 
+ * review
+ * installer
  */
