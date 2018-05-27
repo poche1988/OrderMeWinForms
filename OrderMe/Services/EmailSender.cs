@@ -19,8 +19,8 @@ namespace OrderMe.Services
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
 
-                message.From = new MailAddress("gonzaloamado88@gmail.com");
-                message.To.Add(new MailAddress("futbolcracks.agentes@gmail.com"));
+                message.From = new MailAddress("accounts@otiasandlouie.com");
+                message.To.Add(new MailAddress("gonzaloamado@mycvonline.co.nz"));
                 message.Subject = "New Order - Otis & Louie - " + order.Date.ToString("dd-MM-yyyy");
 
                 string content = "Company: " + order.Company + "<br />" +
@@ -37,10 +37,9 @@ namespace OrderMe.Services
                 message.Body = content;
                 message.IsBodyHtml = true;
                 smtp.Port = 587;
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
+                smtp.Host = "103.250.119.215";
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("gonzaloamado88@gmail.com", "poche1988");
+                smtp.Credentials = new NetworkCredential("accounts@otiasandlouie.com", "money1");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
 
