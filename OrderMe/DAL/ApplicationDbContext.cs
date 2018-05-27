@@ -6,6 +6,14 @@ namespace OrderMe.DAL
 {
     public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext()
+        {
+            if (!Database.Exists())
+            {
+                Database.Create();
+                DBInitializer.initialize();
+            }
+        }
         public DbSet<User> Users { get; set; }
 
         public DbSet<Brand> Brands { get; set; }

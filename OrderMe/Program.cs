@@ -37,7 +37,7 @@ namespace OrderMe
  * boton submit en listado de ordenes cuando clickeas en orden no enviada // listo
  * 
  * login no case sensitive // listo
- * backup DB // 
+ * backup DB // listo
  * review
  * installer
  */

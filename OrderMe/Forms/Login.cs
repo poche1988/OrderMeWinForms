@@ -23,8 +23,9 @@ namespace OrderMe.Forms
             {
                 _Users = _repository.GetUsers();
             }
-            catch
+            catch (Exception ex)
             {
+                var error = ex.Message;
                 MessageBox.Show("Check internet connection");
                 Environment.Exit(-1);
             }

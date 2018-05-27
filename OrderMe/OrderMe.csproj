@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DBInitializer.cs" />
     <Compile Include="DAL\Repository.cs" />
     <Compile Include="Forms\Database.cs">
       <SubType>Form</SubType>
