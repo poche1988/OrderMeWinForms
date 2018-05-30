@@ -55,8 +55,9 @@ namespace OrderMe.Forms
 
         private void createandsubmitBtn_Click(object sender, EventArgs e)
         {
+            var emailAddress = EmailTxt.Text;
             Order order = createOrder(OrderState.Created);
-            bool sent = EmailSender.SendEmail(order);
+            bool sent = EmailSender.SendEmail(order, emailAddress);
             if (sent) order.OrderStatus = OrderState.Sent;
             _repository.CreateOrder(order);
             _form.UpdateOrdersList();

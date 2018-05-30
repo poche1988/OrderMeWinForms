@@ -30,9 +30,9 @@ namespace OrderMe.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewOrder));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,6 +52,8 @@ namespace OrderMe.Forms
             this.createandsubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.creatingMsg = new System.Windows.Forms.Label();
             this.CreatinMsgPanel = new System.Windows.Forms.Panel();
+            this.EmailTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -164,22 +166,22 @@ namespace OrderMe.Forms
             // ProductsGrid
             // 
             this.ProductsGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ProductsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProductsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProductsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.brand,
@@ -187,14 +189,14 @@ namespace OrderMe.Forms
             this.SKU,
             this.productname,
             this.quantity});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductsGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductsGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.ProductsGrid.DoubleBuffered = true;
             this.ProductsGrid.EnableHeadersVisualStyles = false;
             this.ProductsGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -267,7 +269,7 @@ namespace OrderMe.Forms
             this.CreateOrderBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.CreateOrderBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.CreateOrderBtn.selected = false;
-            this.CreateOrderBtn.Size = new System.Drawing.Size(223, 48);
+            this.CreateOrderBtn.Size = new System.Drawing.Size(183, 48);
             this.CreateOrderBtn.TabIndex = 15;
             this.CreateOrderBtn.Text = "Create Order";
             this.CreateOrderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,7 +298,7 @@ namespace OrderMe.Forms
             this.createandsubmitBtn.IconVisible = true;
             this.createandsubmitBtn.IconZoom = 50D;
             this.createandsubmitBtn.IsTab = false;
-            this.createandsubmitBtn.Location = new System.Drawing.Point(299, 604);
+            this.createandsubmitBtn.Location = new System.Drawing.Point(253, 604);
             this.createandsubmitBtn.Name = "createandsubmitBtn";
             this.createandsubmitBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.createandsubmitBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -331,11 +333,42 @@ namespace OrderMe.Forms
             this.CreatinMsgPanel.TabIndex = 18;
             this.CreatinMsgPanel.Visible = false;
             // 
+            // EmailTxt
+            // 
+            this.EmailTxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.EmailTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmailTxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.EmailTxt.BorderThickness = 1;
+            this.EmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmailTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.EmailTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmailTxt.isPassword = false;
+            this.EmailTxt.Location = new System.Drawing.Point(556, 608);
+            this.EmailTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.EmailTxt.Name = "EmailTxt";
+            this.EmailTxt.Size = new System.Drawing.Size(236, 44);
+            this.EmailTxt.TabIndex = 20;
+            this.EmailTxt.Text = "gonzaloamado88@gmail.com";
+            this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label4.Location = new System.Drawing.Point(499, 618);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 21);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Email";
+            // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.EmailTxt);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.CreatinMsgPanel);
             this.Controls.Add(this.createandsubmitBtn);
             this.Controls.Add(this.CreateOrderBtn);
@@ -379,5 +412,7 @@ namespace OrderMe.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
+        private System.Windows.Forms.Label label4;
     }
 }

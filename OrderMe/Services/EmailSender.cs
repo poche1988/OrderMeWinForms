@@ -12,7 +12,7 @@ namespace OrderMe.Services
 {
     public static class EmailSender
     {
-        public static bool SendEmail(Order order)
+        public static bool SendEmail(Order order, string emailAddress)
         {
             try
             {
@@ -20,7 +20,7 @@ namespace OrderMe.Services
                 SmtpClient smtp = new SmtpClient();
 
                 message.From = new MailAddress("accounts@otiasandlouie.com");
-                message.To.Add(new MailAddress("gonzaloamado@mycvonline.co.nz"));
+                message.To.Add(new MailAddress(emailAddress));
                 message.Subject = "New Order - Otis & Louie - " + order.Date.ToString("dd-MM-yyyy");
 
                 string content = "Company: " + order.Company + "<br />" +

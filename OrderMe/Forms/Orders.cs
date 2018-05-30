@@ -147,10 +147,11 @@ namespace OrderMe.Forms
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
+            var emailAddress = EmailTxt.Text;
             Cursor.Current = Cursors.WaitCursor;
             DataGridViewRow row = this.OrderGrid.SelectedRows[0];
             Order order = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value)).FirstOrDefault();
-            bool sent = EmailSender.SendEmail(order);
+            bool sent = EmailSender.SendEmail(order, emailAddress);
             if (sent)
             {
                 _repository.ChangeOrderStatusToSent(order.OrderId);

@@ -58,6 +58,8 @@ namespace OrderMe.Forms
             this.datefromlbl = new System.Windows.Forms.Label();
             this.datetolbl = new System.Windows.Forms.Label();
             this.SearchBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.EmailTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
@@ -383,11 +385,42 @@ namespace OrderMe.Forms
             this.SearchBtn.Zoom = 10;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
+            // EmailTxt
+            // 
+            this.EmailTxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.EmailTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmailTxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.EmailTxt.BorderThickness = 1;
+            this.EmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmailTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.EmailTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmailTxt.isPassword = false;
+            this.EmailTxt.Location = new System.Drawing.Point(621, 553);
+            this.EmailTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.EmailTxt.Name = "EmailTxt";
+            this.EmailTxt.Size = new System.Drawing.Size(236, 44);
+            this.EmailTxt.TabIndex = 25;
+            this.EmailTxt.Text = "gonzaloamado88@gmail.com";
+            this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label4.Location = new System.Drawing.Point(564, 563);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 21);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Email";
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.EmailTxt);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.datetolbl);
             this.Controls.Add(this.datefromlbl);
@@ -437,5 +470,7 @@ namespace OrderMe.Forms
         private System.Windows.Forms.Label datefromlbl;
         private System.Windows.Forms.Label datetolbl;
         private Bunifu.Framework.UI.BunifuImageButton SearchBtn;
+        private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
+        private System.Windows.Forms.Label label4;
     }
 }
