@@ -12,7 +12,7 @@ namespace OrderMe.Services
 {
     public static class EmailSender
     {
-        public static bool SendEmail(Order order, string emailAddress)
+        public static bool SendEmail(Order order, string emailAddress, string comments)
         {
             try
             {
@@ -33,6 +33,9 @@ namespace OrderMe.Services
                         + od.Product.Category.Name + " " +
                         od.Product.ProductName + "- Quantity: " + od.Quantity.ToString() + "<br />";
                 }
+
+                if (!string.IsNullOrEmpty(comments))
+                    content += "<br />Comments:" + comments; 
 
                 message.Body = content;
                 message.IsBodyHtml = true;

@@ -54,6 +54,8 @@ namespace OrderMe.Forms
             this.CreatinMsgPanel = new System.Windows.Forms.Panel();
             this.EmailTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label4 = new System.Windows.Forms.Label();
+            this.CommentsTXT = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -201,10 +203,10 @@ namespace OrderMe.Forms
             this.ProductsGrid.EnableHeadersVisualStyles = false;
             this.ProductsGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ProductsGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.ProductsGrid.Location = new System.Drawing.Point(16, 103);
+            this.ProductsGrid.Location = new System.Drawing.Point(16, 158);
             this.ProductsGrid.Name = "ProductsGrid";
             this.ProductsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ProductsGrid.Size = new System.Drawing.Size(976, 449);
+            this.ProductsGrid.Size = new System.Drawing.Size(976, 394);
             this.ProductsGrid.TabIndex = 14;
             this.ProductsGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.ProductsGrid_CurrentCellDirtyStateChanged);
             this.ProductsGrid.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ProductsGrid_EditingControlShowing);
@@ -348,7 +350,7 @@ namespace OrderMe.Forms
             this.EmailTxt.Name = "EmailTxt";
             this.EmailTxt.Size = new System.Drawing.Size(236, 44);
             this.EmailTxt.TabIndex = 20;
-            this.EmailTxt.Text = "gonzaloamado88@gmail.com";
+            this.EmailTxt.Text = "sales@orijen.co.nz";
             this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
@@ -362,11 +364,41 @@ namespace OrderMe.Forms
             this.label4.TabIndex = 19;
             this.label4.Text = "Email";
             // 
+            // CommentsTXT
+            // 
+            this.CommentsTXT.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.CommentsTXT.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CommentsTXT.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.CommentsTXT.BorderThickness = 1;
+            this.CommentsTXT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CommentsTXT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.CommentsTXT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CommentsTXT.isPassword = false;
+            this.CommentsTXT.Location = new System.Drawing.Point(107, 95);
+            this.CommentsTXT.Margin = new System.Windows.Forms.Padding(4);
+            this.CommentsTXT.Name = "CommentsTXT";
+            this.CommentsTXT.Size = new System.Drawing.Size(685, 44);
+            this.CommentsTXT.TabIndex = 22;
+            this.CommentsTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label5.Location = new System.Drawing.Point(12, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 21);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Comments";
+            // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.CommentsTXT);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CreatinMsgPanel);
@@ -414,5 +446,7 @@ namespace OrderMe.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
         private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMetroTextbox CommentsTXT;
+        private System.Windows.Forms.Label label5;
     }
 }

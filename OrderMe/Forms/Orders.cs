@@ -25,6 +25,8 @@ namespace OrderMe.Forms
             _repository = repo;
             _form = form;
             InitializeComponent();
+            dateFrom.Value = DateTime.Today;
+            DateTo.Value = DateTime.Today;
             loadOrderGrid(_Orders);
         }
 
@@ -148,10 +150,11 @@ namespace OrderMe.Forms
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             var emailAddress = EmailTxt.Text;
+            var comments = CommentsTxt.Text;
             Cursor.Current = Cursors.WaitCursor;
             DataGridViewRow row = this.OrderGrid.SelectedRows[0];
             Order order = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value)).FirstOrDefault();
-            bool sent = EmailSender.SendEmail(order, emailAddress);
+            bool sent = EmailSender.SendEmail(order, emailAddress, comments);
             if (sent)
             {
                 _repository.ChangeOrderStatusToSent(order.OrderId);

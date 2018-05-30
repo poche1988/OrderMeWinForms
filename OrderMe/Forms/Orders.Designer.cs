@@ -60,6 +60,8 @@ namespace OrderMe.Forms
             this.SearchBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.EmailTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label4 = new System.Windows.Forms.Label();
+            this.CommentsTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
@@ -395,12 +397,12 @@ namespace OrderMe.Forms
             this.EmailTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.EmailTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.EmailTxt.isPassword = false;
-            this.EmailTxt.Location = new System.Drawing.Point(621, 553);
+            this.EmailTxt.Location = new System.Drawing.Point(585, 541);
             this.EmailTxt.Margin = new System.Windows.Forms.Padding(4);
             this.EmailTxt.Name = "EmailTxt";
             this.EmailTxt.Size = new System.Drawing.Size(236, 44);
             this.EmailTxt.TabIndex = 25;
-            this.EmailTxt.Text = "gonzaloamado88@gmail.com";
+            this.EmailTxt.Text = "sales@orijen.co.nz";
             this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
@@ -408,17 +410,47 @@ namespace OrderMe.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.label4.Location = new System.Drawing.Point(564, 563);
+            this.label4.Location = new System.Drawing.Point(490, 553);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 24;
             this.label4.Text = "Email";
+            // 
+            // CommentsTxt
+            // 
+            this.CommentsTxt.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.CommentsTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CommentsTxt.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.CommentsTxt.BorderThickness = 1;
+            this.CommentsTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CommentsTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.CommentsTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CommentsTxt.isPassword = false;
+            this.CommentsTxt.Location = new System.Drawing.Point(585, 593);
+            this.CommentsTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.CommentsTxt.Name = "CommentsTxt";
+            this.CommentsTxt.Size = new System.Drawing.Size(356, 44);
+            this.CommentsTxt.TabIndex = 27;
+            this.CommentsTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label1.Location = new System.Drawing.Point(490, 605);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Comments";
             // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.CommentsTxt);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBtn);
@@ -472,5 +504,7 @@ namespace OrderMe.Forms
         private Bunifu.Framework.UI.BunifuImageButton SearchBtn;
         private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
         private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMetroTextbox CommentsTxt;
+        private System.Windows.Forms.Label label1;
     }
 }

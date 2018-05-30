@@ -267,7 +267,8 @@
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.ControlBox = false;
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
