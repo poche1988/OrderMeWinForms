@@ -43,11 +43,6 @@ namespace OrderMe.Forms
             this.DateLabel = new System.Windows.Forms.Label();
             this.DateTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ProductsGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.createandsubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.creatingMsg = new System.Windows.Forms.Label();
@@ -56,6 +51,11 @@ namespace OrderMe.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.CommentsTXT = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -211,39 +211,6 @@ namespace OrderMe.Forms
             this.ProductsGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.ProductsGrid_CurrentCellDirtyStateChanged);
             this.ProductsGrid.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ProductsGrid_EditingControlShowing);
             // 
-            // brand
-            // 
-            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.brand.HeaderText = "Brand";
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 73;
-            // 
-            // categoryname
-            // 
-            this.categoryname.FillWeight = 200F;
-            this.categoryname.HeaderText = "Product";
-            this.categoryname.Name = "categoryname";
-            this.categoryname.ReadOnly = true;
-            this.categoryname.Width = 200;
-            // 
-            // SKU
-            // 
-            this.SKU.HeaderText = "SKU";
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            // 
-            // productname
-            // 
-            this.productname.HeaderText = "Size";
-            this.productname.Name = "productname";
-            this.productname.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            // 
             // CreateOrderBtn
             // 
             this.CreateOrderBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -392,6 +359,41 @@ namespace OrderMe.Forms
             this.label5.TabIndex = 21;
             this.label5.Text = "Comments";
             // 
+            // brand
+            // 
+            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.brand.HeaderText = "Brand";
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 73;
+            // 
+            // categoryname
+            // 
+            this.categoryname.FillWeight = 200F;
+            this.categoryname.HeaderText = "Category";
+            this.categoryname.Name = "categoryname";
+            this.categoryname.ReadOnly = true;
+            this.categoryname.Width = 200;
+            // 
+            // SKU
+            // 
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            // 
+            // productname
+            // 
+            this.productname.FillWeight = 200F;
+            this.productname.HeaderText = "Product";
+            this.productname.Name = "productname";
+            this.productname.ReadOnly = true;
+            this.productname.Width = 200;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,14 +441,14 @@ namespace OrderMe.Forms
         private Bunifu.Framework.UI.BunifuFlatButton createandsubmitBtn;
         private System.Windows.Forms.Label creatingMsg;
         private System.Windows.Forms.Panel CreatinMsgPanel;
+        private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMetroTextbox CommentsTXT;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn brand;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryname;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private Bunifu.Framework.UI.BunifuMetroTextbox EmailTxt;
-        private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox CommentsTXT;
-        private System.Windows.Forms.Label label5;
     }
 }

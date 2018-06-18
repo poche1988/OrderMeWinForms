@@ -33,6 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMeMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sideMenu = new System.Windows.Forms.Panel();
+            this.DatabaseBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ProductsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.OrdersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.NewOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,7 +44,8 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.FormContainer = new System.Windows.Forms.Panel();
             this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.DatabaseBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BrandsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.SupliersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.sideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBtn)).BeginInit();
             this.Header.SuspendLayout();
@@ -58,6 +60,8 @@
             // sideMenu
             // 
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.sideMenu.Controls.Add(this.SupliersBtn);
+            this.sideMenu.Controls.Add(this.BrandsBtn);
             this.sideMenu.Controls.Add(this.DatabaseBtn);
             this.sideMenu.Controls.Add(this.ProductsBtn);
             this.sideMenu.Controls.Add(this.OrdersBtn);
@@ -69,6 +73,42 @@
             this.sideMenu.Name = "sideMenu";
             this.sideMenu.Size = new System.Drawing.Size(50, 664);
             this.sideMenu.TabIndex = 0;
+            // 
+            // DatabaseBtn
+            // 
+            this.DatabaseBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DatabaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.DatabaseBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatabaseBtn.BorderRadius = 0;
+            this.DatabaseBtn.ButtonText = "        Database";
+            this.DatabaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.DatabaseBtn, BunifuAnimatorNS.DecorationType.None);
+            this.DatabaseBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.DatabaseBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.DatabaseBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("DatabaseBtn.Iconimage")));
+            this.DatabaseBtn.Iconimage_right = null;
+            this.DatabaseBtn.Iconimage_right_Selected = null;
+            this.DatabaseBtn.Iconimage_Selected = null;
+            this.DatabaseBtn.IconMarginLeft = 0;
+            this.DatabaseBtn.IconMarginRight = 0;
+            this.DatabaseBtn.IconRightVisible = true;
+            this.DatabaseBtn.IconRightZoom = 0D;
+            this.DatabaseBtn.IconVisible = true;
+            this.DatabaseBtn.IconZoom = 60D;
+            this.DatabaseBtn.IsTab = true;
+            this.DatabaseBtn.Location = new System.Drawing.Point(0, 283);
+            this.DatabaseBtn.Name = "DatabaseBtn";
+            this.DatabaseBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.DatabaseBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DatabaseBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.DatabaseBtn.selected = false;
+            this.DatabaseBtn.Size = new System.Drawing.Size(200, 50);
+            this.DatabaseBtn.TabIndex = 4;
+            this.DatabaseBtn.Text = "        Database";
+            this.DatabaseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DatabaseBtn.Textcolor = System.Drawing.Color.Silver;
+            this.DatabaseBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatabaseBtn.Click += new System.EventHandler(this.DatabaseBtn_Click);
             // 
             // ProductsBtn
             // 
@@ -273,41 +313,76 @@
             animation2.TransparencyCoeff = 0F;
             this.tShow.DefaultAnimation = animation2;
             // 
-            // DatabaseBtn
+            // BrandsBtn
             // 
-            this.DatabaseBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.DatabaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.DatabaseBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DatabaseBtn.BorderRadius = 0;
-            this.DatabaseBtn.ButtonText = "        Database";
-            this.DatabaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tShow.SetDecoration(this.DatabaseBtn, BunifuAnimatorNS.DecorationType.None);
-            this.DatabaseBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.DatabaseBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.DatabaseBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("DatabaseBtn.Iconimage")));
-            this.DatabaseBtn.Iconimage_right = null;
-            this.DatabaseBtn.Iconimage_right_Selected = null;
-            this.DatabaseBtn.Iconimage_Selected = null;
-            this.DatabaseBtn.IconMarginLeft = 0;
-            this.DatabaseBtn.IconMarginRight = 0;
-            this.DatabaseBtn.IconRightVisible = true;
-            this.DatabaseBtn.IconRightZoom = 0D;
-            this.DatabaseBtn.IconVisible = true;
-            this.DatabaseBtn.IconZoom = 60D;
-            this.DatabaseBtn.IsTab = true;
-            this.DatabaseBtn.Location = new System.Drawing.Point(0, 198);
-            this.DatabaseBtn.Name = "DatabaseBtn";
-            this.DatabaseBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.DatabaseBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.DatabaseBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.DatabaseBtn.selected = false;
-            this.DatabaseBtn.Size = new System.Drawing.Size(200, 50);
-            this.DatabaseBtn.TabIndex = 4;
-            this.DatabaseBtn.Text = "        Database";
-            this.DatabaseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DatabaseBtn.Textcolor = System.Drawing.Color.Silver;
-            this.DatabaseBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatabaseBtn.Click += new System.EventHandler(this.DatabaseBtn_Click);
+            this.BrandsBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.BrandsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BrandsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BrandsBtn.BorderRadius = 0;
+            this.BrandsBtn.ButtonText = "         Brands";
+            this.BrandsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.BrandsBtn, BunifuAnimatorNS.DecorationType.None);
+            this.BrandsBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.BrandsBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.BrandsBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("BrandsBtn.Iconimage")));
+            this.BrandsBtn.Iconimage_right = null;
+            this.BrandsBtn.Iconimage_right_Selected = null;
+            this.BrandsBtn.Iconimage_Selected = null;
+            this.BrandsBtn.IconMarginLeft = 0;
+            this.BrandsBtn.IconMarginRight = 0;
+            this.BrandsBtn.IconRightVisible = true;
+            this.BrandsBtn.IconRightZoom = 0D;
+            this.BrandsBtn.IconVisible = true;
+            this.BrandsBtn.IconZoom = 55D;
+            this.BrandsBtn.IsTab = true;
+            this.BrandsBtn.Location = new System.Drawing.Point(0, 189);
+            this.BrandsBtn.Name = "BrandsBtn";
+            this.BrandsBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BrandsBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.BrandsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.BrandsBtn.selected = false;
+            this.BrandsBtn.Size = new System.Drawing.Size(200, 50);
+            this.BrandsBtn.TabIndex = 5;
+            this.BrandsBtn.Text = "         Brands";
+            this.BrandsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BrandsBtn.Textcolor = System.Drawing.Color.Silver;
+            this.BrandsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandsBtn.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // SupliersBtn
+            // 
+            this.SupliersBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SupliersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SupliersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SupliersBtn.BorderRadius = 0;
+            this.SupliersBtn.ButtonText = "        Suppliers";
+            this.SupliersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.SupliersBtn, BunifuAnimatorNS.DecorationType.None);
+            this.SupliersBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.SupliersBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.SupliersBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("SupliersBtn.Iconimage")));
+            this.SupliersBtn.Iconimage_right = null;
+            this.SupliersBtn.Iconimage_right_Selected = null;
+            this.SupliersBtn.Iconimage_Selected = null;
+            this.SupliersBtn.IconMarginLeft = 0;
+            this.SupliersBtn.IconMarginRight = 0;
+            this.SupliersBtn.IconRightVisible = true;
+            this.SupliersBtn.IconRightZoom = 0D;
+            this.SupliersBtn.IconVisible = true;
+            this.SupliersBtn.IconZoom = 60D;
+            this.SupliersBtn.IsTab = true;
+            this.SupliersBtn.Location = new System.Drawing.Point(0, 236);
+            this.SupliersBtn.Name = "SupliersBtn";
+            this.SupliersBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SupliersBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SupliersBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.SupliersBtn.selected = false;
+            this.SupliersBtn.Size = new System.Drawing.Size(200, 50);
+            this.SupliersBtn.TabIndex = 6;
+            this.SupliersBtn.Text = "        Suppliers";
+            this.SupliersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SupliersBtn.Textcolor = System.Drawing.Color.Silver;
+            this.SupliersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // OrderMeMenu
             // 
@@ -348,5 +423,7 @@
         private BunifuAnimatorNS.BunifuTransition tShow;
         public System.Windows.Forms.Panel FormContainer;
         private Bunifu.Framework.UI.BunifuFlatButton DatabaseBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton BrandsBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton SupliersBtn;
     }
 }

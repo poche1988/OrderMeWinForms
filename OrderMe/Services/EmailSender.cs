@@ -19,7 +19,7 @@ namespace OrderMe.Services
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
 
-                message.From = new MailAddress("accounts@otiasandlouie.com");
+                message.From = new MailAddress("accounts@otisandlouie.com");
                 message.To.Add(new MailAddress(emailAddress));
                 message.Subject = "New Order - Otis & Louie - " + order.Date.ToString("dd-MM-yyyy");
 

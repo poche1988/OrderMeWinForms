@@ -38,6 +38,12 @@ INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Wild Coast Dog', 2)
 INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Wild Prairie Cat', 2);
 INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Pacific Cat', 2);
 INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Grasslands Cat', 2);
+INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Orijen Dog Treats', 1);
+INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Orijen Cat Treats', 1);
+INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('New Acana Treats', 2);
+INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Pet Kelp', 1);
+INSERT INTO ProductCategories (Name, Brand_BrandId) VALUES ('Earth Rated Poopbags', 1);
+
 
 
 INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORPPY.34', '340gm', 1);
@@ -179,3 +185,46 @@ INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACG
 INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACGFCG1.8', '1.8Kg', 32);
 INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACGFCG5.4', '5.4Kg', 32);
 
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTO42.5', 'Original-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTW42.5', 'Wild Boar-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTD42.5', 'Free-Run Duck-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTL42.5', 'Romney Lamb-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTT42.5', 'Tundra-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTF42.5', 'Six Fish-Dog 42.5gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTO92', 'Original-Dog 92gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTW92', 'Wild Boar-Dog 92gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTD92', 'Free-Run Duck-Dog 92gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTL92', 'Romney Lamb-Dog 92gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTT92', 'Tundra-Dog 92gm', 33);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORFDTF92', 'Six Fish-Dog 92gm', 33);
+
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORTCO35', 'Original-Cat 35gm', 34);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORTCW35', 'Wild Boar-Cat 35gm', 34);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORTCL35', 'Romney Lamb-Cat 35gm', 34);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORTCT35', 'Tundra-Cat 35gm', 34);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ORTCF35', 'Six Fish-Cat 35gm', 34);
+
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTL35', 'Grass Fed-Dog 35gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTD35', 'Free-Run Duck-Dog 35gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTY35', 'Yorkshire Pork-Dog 35gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTP35', 'Pacific Pilchard-Dog 35gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTL92', 'Grass Fed-Dog 92gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTD92', 'Free-Run Duck-Dog 92gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTY92', 'Yorkshire Pork-Dog 92gm', 35);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('ACFDTP92', 'Pacific Pilchard-Dog 92gm', 35);
+
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('PKJB227', 'Joint and Bone 227gm', 36);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('PKSC227', 'Skin and Coat 227gm', 36);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('PKPB227', 'Probiotic 227gm', 36);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('PKWC227', 'Well Being - Canine 227gm', 36);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('PKWF170', 'Well Being - Feline 170gm', 36);
+
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('DISPGREEN', 'Green dispenser with
+15 eco-friendly bags', 37);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('COMP60', '4 rolls totalling
+60 compostable bags', 37);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('BIO120', '8 rolls totalling 120
+eco-friendly bags', 37);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('BIO300', '300 eco-friendly bags', 37);
+INSERT INTO Products (SKU, ProductName, Category_ProductCategoryId) VALUES ('BIOHANDLE120', '120 eco-friendly
+handle bags', 37);

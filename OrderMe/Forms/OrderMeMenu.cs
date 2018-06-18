@@ -81,5 +81,10 @@ namespace OrderMe.Forms
         {
             OpenFormInContainer(new Database(_Products, _Orders));
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

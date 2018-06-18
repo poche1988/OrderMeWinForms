@@ -149,7 +149,7 @@ namespace OrderMe.Forms
             // categoryname
             // 
             this.categoryname.FillWeight = 200F;
-            this.categoryname.HeaderText = "Product";
+            this.categoryname.HeaderText = "Category";
             this.categoryname.Name = "categoryname";
             this.categoryname.ReadOnly = true;
             this.categoryname.Width = 200;
@@ -162,9 +162,11 @@ namespace OrderMe.Forms
             // 
             // productname
             // 
-            this.productname.HeaderText = "Size";
+            this.productname.FillWeight = 200F;
+            this.productname.HeaderText = "Product";
             this.productname.Name = "productname";
             this.productname.ReadOnly = true;
+            this.productname.Width = 200;
             // 
             // Products
             // 
