@@ -94,9 +94,23 @@ namespace OrderMe.DAL
         public List<Brand> Getbrands()
         {
             var brands = _Context.Brands
-                .Where(b=>b.Active == true)
+                //.Where(b=>b.Active == true)
                 .ToList();
             return brands;
+        }
+
+        public void addBrand(Brand b)
+        {
+            _Context.Brands.Add(b);
+            _Context.SaveChanges();
+        }
+
+        public void EditBrand(int id, string name, bool active)
+        {
+            var brand = _Context.Brands.Where(b => b.BrandId == id).FirstOrDefault();
+            brand.Name = name;
+            brand.Active = active;
+            _Context.SaveChanges();
         }
         #endregion
 
