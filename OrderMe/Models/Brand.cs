@@ -11,5 +11,7 @@ namespace OrderMe.Models
         public int BrandId { get; set; }
 
         public string Name { get; set; }
+
+        public bool Active { get; set; }
     }
 }

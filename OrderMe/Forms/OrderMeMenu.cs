@@ -10,6 +10,7 @@ namespace OrderMe.Forms
     {
         private Repository _repository;
         private List<Product> _Products;
+        private List<Brand> _Brands;
         private List<Order> _Orders;
 
         public OrderMeMenu()
@@ -18,6 +19,7 @@ namespace OrderMe.Forms
             _repository = Repository.GetInstance();
             _Products = _repository.Getproducts();
             _Orders = _repository.GetOrders();
+            _Brands = _repository.Getbrands();
             OpenFormInContainer(new NewOrder(_Products, _repository,this));
         }
 
@@ -82,9 +84,9 @@ namespace OrderMe.Forms
             OpenFormInContainer(new Database(_Products, _Orders));
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void BrandsBtn_Click(object sender, EventArgs e)
         {
-
+            OpenFormInContainer(new Brands(_Brands, _repository));
         }
     }
 }

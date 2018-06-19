@@ -90,7 +90,15 @@ namespace OrderMe.DAL
         }
         #endregion
 
-
+        #region brands
+        public List<Brand> Getbrands()
+        {
+            var brands = _Context.Brands
+                .Where(b=>b.Active == true)
+                .ToList();
+            return brands;
+        }
+        #endregion
 
     }
 

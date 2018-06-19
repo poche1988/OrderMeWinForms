@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMeMenu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sideMenu = new System.Windows.Forms.Panel();
+            this.SupliersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BrandsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.DatabaseBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ProductsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.OrdersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,8 +46,6 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.FormContainer = new System.Windows.Forms.Panel();
             this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.BrandsBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.SupliersBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.sideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBtn)).BeginInit();
             this.Header.SuspendLayout();
@@ -73,6 +73,77 @@
             this.sideMenu.Name = "sideMenu";
             this.sideMenu.Size = new System.Drawing.Size(50, 664);
             this.sideMenu.TabIndex = 0;
+            // 
+            // SupliersBtn
+            // 
+            this.SupliersBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SupliersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SupliersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SupliersBtn.BorderRadius = 0;
+            this.SupliersBtn.ButtonText = "        Suppliers";
+            this.SupliersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.SupliersBtn, BunifuAnimatorNS.DecorationType.None);
+            this.SupliersBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.SupliersBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.SupliersBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("SupliersBtn.Iconimage")));
+            this.SupliersBtn.Iconimage_right = null;
+            this.SupliersBtn.Iconimage_right_Selected = null;
+            this.SupliersBtn.Iconimage_Selected = null;
+            this.SupliersBtn.IconMarginLeft = 0;
+            this.SupliersBtn.IconMarginRight = 0;
+            this.SupliersBtn.IconRightVisible = true;
+            this.SupliersBtn.IconRightZoom = 0D;
+            this.SupliersBtn.IconVisible = true;
+            this.SupliersBtn.IconZoom = 60D;
+            this.SupliersBtn.IsTab = true;
+            this.SupliersBtn.Location = new System.Drawing.Point(0, 236);
+            this.SupliersBtn.Name = "SupliersBtn";
+            this.SupliersBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SupliersBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SupliersBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.SupliersBtn.selected = false;
+            this.SupliersBtn.Size = new System.Drawing.Size(200, 50);
+            this.SupliersBtn.TabIndex = 6;
+            this.SupliersBtn.Text = "        Suppliers";
+            this.SupliersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SupliersBtn.Textcolor = System.Drawing.Color.Silver;
+            this.SupliersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // BrandsBtn
+            // 
+            this.BrandsBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.BrandsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BrandsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BrandsBtn.BorderRadius = 0;
+            this.BrandsBtn.ButtonText = "         Brands";
+            this.BrandsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tShow.SetDecoration(this.BrandsBtn, BunifuAnimatorNS.DecorationType.None);
+            this.BrandsBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.BrandsBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.BrandsBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("BrandsBtn.Iconimage")));
+            this.BrandsBtn.Iconimage_right = null;
+            this.BrandsBtn.Iconimage_right_Selected = null;
+            this.BrandsBtn.Iconimage_Selected = null;
+            this.BrandsBtn.IconMarginLeft = 0;
+            this.BrandsBtn.IconMarginRight = 0;
+            this.BrandsBtn.IconRightVisible = true;
+            this.BrandsBtn.IconRightZoom = 0D;
+            this.BrandsBtn.IconVisible = true;
+            this.BrandsBtn.IconZoom = 55D;
+            this.BrandsBtn.IsTab = true;
+            this.BrandsBtn.Location = new System.Drawing.Point(0, 189);
+            this.BrandsBtn.Name = "BrandsBtn";
+            this.BrandsBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BrandsBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.BrandsBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.BrandsBtn.selected = false;
+            this.BrandsBtn.Size = new System.Drawing.Size(200, 50);
+            this.BrandsBtn.TabIndex = 5;
+            this.BrandsBtn.Text = "         Brands";
+            this.BrandsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BrandsBtn.Textcolor = System.Drawing.Color.Silver;
+            this.BrandsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandsBtn.Click += new System.EventHandler(this.BrandsBtn_Click);
             // 
             // DatabaseBtn
             // 
@@ -296,93 +367,22 @@
             // 
             this.tShow.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.tShow.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.tShow.DefaultAnimation = animation2;
-            // 
-            // BrandsBtn
-            // 
-            this.BrandsBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.BrandsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BrandsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BrandsBtn.BorderRadius = 0;
-            this.BrandsBtn.ButtonText = "         Brands";
-            this.BrandsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tShow.SetDecoration(this.BrandsBtn, BunifuAnimatorNS.DecorationType.None);
-            this.BrandsBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.BrandsBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.BrandsBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("BrandsBtn.Iconimage")));
-            this.BrandsBtn.Iconimage_right = null;
-            this.BrandsBtn.Iconimage_right_Selected = null;
-            this.BrandsBtn.Iconimage_Selected = null;
-            this.BrandsBtn.IconMarginLeft = 0;
-            this.BrandsBtn.IconMarginRight = 0;
-            this.BrandsBtn.IconRightVisible = true;
-            this.BrandsBtn.IconRightZoom = 0D;
-            this.BrandsBtn.IconVisible = true;
-            this.BrandsBtn.IconZoom = 55D;
-            this.BrandsBtn.IsTab = true;
-            this.BrandsBtn.Location = new System.Drawing.Point(0, 189);
-            this.BrandsBtn.Name = "BrandsBtn";
-            this.BrandsBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BrandsBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.BrandsBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.BrandsBtn.selected = false;
-            this.BrandsBtn.Size = new System.Drawing.Size(200, 50);
-            this.BrandsBtn.TabIndex = 5;
-            this.BrandsBtn.Text = "         Brands";
-            this.BrandsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BrandsBtn.Textcolor = System.Drawing.Color.Silver;
-            this.BrandsBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandsBtn.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // SupliersBtn
-            // 
-            this.SupliersBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.SupliersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SupliersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SupliersBtn.BorderRadius = 0;
-            this.SupliersBtn.ButtonText = "        Suppliers";
-            this.SupliersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tShow.SetDecoration(this.SupliersBtn, BunifuAnimatorNS.DecorationType.None);
-            this.SupliersBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.SupliersBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.SupliersBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("SupliersBtn.Iconimage")));
-            this.SupliersBtn.Iconimage_right = null;
-            this.SupliersBtn.Iconimage_right_Selected = null;
-            this.SupliersBtn.Iconimage_Selected = null;
-            this.SupliersBtn.IconMarginLeft = 0;
-            this.SupliersBtn.IconMarginRight = 0;
-            this.SupliersBtn.IconRightVisible = true;
-            this.SupliersBtn.IconRightZoom = 0D;
-            this.SupliersBtn.IconVisible = true;
-            this.SupliersBtn.IconZoom = 60D;
-            this.SupliersBtn.IsTab = true;
-            this.SupliersBtn.Location = new System.Drawing.Point(0, 236);
-            this.SupliersBtn.Name = "SupliersBtn";
-            this.SupliersBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SupliersBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.SupliersBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.SupliersBtn.selected = false;
-            this.SupliersBtn.Size = new System.Drawing.Size(200, 50);
-            this.SupliersBtn.TabIndex = 6;
-            this.SupliersBtn.Text = "        Suppliers";
-            this.SupliersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SupliersBtn.Textcolor = System.Drawing.Color.Silver;
-            this.SupliersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.tShow.DefaultAnimation = animation1;
             // 
             // OrderMeMenu
             // 
