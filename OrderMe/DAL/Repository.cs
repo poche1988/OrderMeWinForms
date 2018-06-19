@@ -114,6 +114,34 @@ namespace OrderMe.DAL
         }
         #endregion
 
+        #region category
+
+        public List<ProductCategory> GetCategoryByBrandId(int id)
+        {
+            var categories = _Context.ProductCategories
+                .Where(c=>c.Brand.BrandId == id)
+                .Include(c => c.Brand)
+                .ToList();
+            return categories;
+        }
+
+        public void addCategory(ProductCategory pc)
+        {
+            _Context.ProductCategories.Add(pc);
+            _Context.SaveChanges();
+        }
+
+        public void EditCategory(int id, string name, bool active)
+        {
+            var category = _Context.ProductCategories.Where(c => c.ProductCategoryId == id).FirstOrDefault();
+            category.Name = name;
+            category.active = active;
+            _Context.SaveChanges();
+        }
+
+        #endregion
+
+
     }
 
 

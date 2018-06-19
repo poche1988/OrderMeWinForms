@@ -127,6 +127,10 @@
     <Compile Include="Migrations\201806190016385_BrandActive.Designer.cs">
       <DependentUpon>201806190016385_BrandActive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806190230200_category-active.cs" />
+    <Compile Include="Migrations\201806190230200_category-active.Designer.cs">
+      <DependentUpon>201806190230200_category-active.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -181,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806190016385_BrandActive.resx">
       <DependentUpon>201806190016385_BrandActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190230200_category-active.resx">
+      <DependentUpon>201806190230200_category-active.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
