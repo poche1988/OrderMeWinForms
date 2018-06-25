@@ -12,6 +12,7 @@ namespace OrderMe.Forms
         private List<Brand> _Brands;
         private List<ProductCategory> _Categories;
         private readonly Repository _repository;
+
         public Brands(Repository repo)
         {
             _repository = repo;
@@ -117,15 +118,20 @@ namespace OrderMe.Forms
         private void AddCategoryBtn_Click(object sender, EventArgs e)
         {
             Brand brand = _Brands.Where(b => b.BrandId == int.Parse(IdTxt.Text)).FirstOrDefault();
-            var category = new ProductCategory
+
+            if (string.IsNullOrEmpty(newcategoryTxt.Text))
             {
-                Name = newcategoryTxt.Text,
-                Brand = brand,
-                active = true
-            };
-            _repository.addCategory(category);
-            loadCategoriesGrid();
-            newcategoryTxt.Text = null;
+                var category = new ProductCategory
+                {
+                    Name = newcategoryTxt.Text,
+                    Brand = brand,
+                    active = true
+                };
+                _repository.addCategory(category);
+                loadCategoriesGrid();
+                newcategoryTxt.Text = null;
+            }
+            
         }
 
         private void EditCategoryBtn_Click(object sender, EventArgs e)
