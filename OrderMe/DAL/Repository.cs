@@ -53,10 +53,45 @@ namespace OrderMe.DAL
             var products = _Context.Products
                 .Include(p=>p.Category)
                 .Include("Category.Brand")
-                //.OrderBy(p=>p.Category.ProductCategoryId)
                 .ToList();
             return products;
         }
+
+        public List<Product> GetActiveProducts()
+        {
+            var products = _Context.Products
+                .Include(p => p.Category)
+                .Include("Category.Brand")
+                .Where(p=>p.Active == true)
+                .ToList();
+            return products;
+        }
+
+        public Product GetproductById(int id)
+        {
+            var product = _Context.Products
+                .Include(p => p.Category)
+                .Include("Category.Brand")
+                .Where(p=>p.ProductId == id)
+                .FirstOrDefault();
+            return product;
+        }
+
+        public void CreateOrEditProduct(Product prod)
+        {
+            if (prod.ProductId == 0)
+                _Context.Products.Add(prod);
+
+            // if id is not 0, it means that we are editing a product, so only rest save the changes.
+            var x = _Context.ChangeTracker.HasChanges();
+            _Context.SaveChanges();
+        }
+
+        public Product GetProductBySKU(string SKU)
+        {
+            return _Context.Products.Where(p => p.SKU == SKU).Include(p => p.Category).FirstOrDefault();
+        }
+            
         #endregion
 
         #region orders
@@ -99,6 +134,14 @@ namespace OrderMe.DAL
             return brands;
         }
 
+        public List<Brand> GetActivebrands()
+        {
+            var brands = _Context.Brands
+                .Where(b=>b.Active == true)
+                .ToList();
+            return brands;
+        }
+
         public void addBrand(Brand b)
         {
             _Context.Brands.Add(b);
@@ -119,7 +162,16 @@ namespace OrderMe.DAL
         public List<ProductCategory> GetCategoryByBrandId(int id)
         {
             var categories = _Context.ProductCategories
-                .Where(c=>c.Brand.BrandId == id)
+                .Where(c=>c.Brand.BrandId == id && c.active == true)
+                .Include(c => c.Brand)
+                .ToList();
+            return categories;
+        }
+
+        public List<ProductCategory> GetCategoryById(int id)
+        {
+            var categories = _Context.ProductCategories
+                .Where(c => c.ProductCategoryId == id)
                 .Include(c => c.Brand)
                 .ToList();
             return categories;

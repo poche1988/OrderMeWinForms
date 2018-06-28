@@ -131,6 +131,10 @@
     <Compile Include="Migrations\201806190230200_category-active.Designer.cs">
       <DependentUpon>201806190230200_category-active.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806250017400_products-ActiveField.cs" />
+    <Compile Include="Migrations\201806250017400_products-ActiveField.Designer.cs">
+      <DependentUpon>201806250017400_products-ActiveField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -188,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806190230200_category-active.resx">
       <DependentUpon>201806190230200_category-active.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250017400_products-ActiveField.resx">
+      <DependentUpon>201806250017400_products-ActiveField.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,5 +17,7 @@ namespace OrderMe.Models
         public string ProductName { get; set; }
 
         public ProductCategory Category { get; set; }
+
+        public bool Active { get; set; }
     }
 }

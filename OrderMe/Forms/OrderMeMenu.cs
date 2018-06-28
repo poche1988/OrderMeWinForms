@@ -74,7 +74,7 @@ namespace OrderMe.Forms
 
         private void ProductsBtn_Click(object sender, EventArgs e)
         {
-            OpenFormInContainer(new Products(_Products));
+            OpenFormInContainer(new Products(_repository));
         }
 
         private void DatabaseBtn_Click(object sender, EventArgs e)

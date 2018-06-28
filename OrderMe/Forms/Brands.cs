@@ -119,7 +119,7 @@ namespace OrderMe.Forms
         {
             Brand brand = _Brands.Where(b => b.BrandId == int.Parse(IdTxt.Text)).FirstOrDefault();
 
-            if (string.IsNullOrEmpty(newcategoryTxt.Text))
+            if (!string.IsNullOrEmpty(newcategoryTxt.Text))
             {
                 var category = new ProductCategory
                 {
