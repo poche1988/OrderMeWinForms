@@ -37,7 +37,15 @@ namespace OrderMe.Forms
                 row.Cells[4].Value = product.SKU;
                 row.Cells[5].Value = product.ProductName;
 
-                ProductsGrid.Rows.Add(row);
+                if (!showactivecheckbox.Checked)
+                {
+                    ProductsGrid.Rows.Add(row);
+                }
+                else
+                {
+                    if(product.Active) ProductsGrid.Rows.Add(row);
+                }
+                
             }
         }
 
@@ -61,7 +69,7 @@ namespace OrderMe.Forms
                 CategoryCB.DisplayMember = "Name";
                 CategoryCB.ValueMember = "ProductCategoryId";
             }
-            
+
         }
 
         private void searchTxtBox_OnValueChanged(object sender, System.EventArgs e)
@@ -71,7 +79,7 @@ namespace OrderMe.Forms
             if (searchTxtBox.Text.Length > 0)
             {
                 var filteredproducts = _Products
-                    .Where(p => 
+                    .Where(p =>
                     p.SKU.ToLower().Contains(searchTxtBox.Text.ToLower()) ||
                     p.ProductName.ToLower().Contains(searchTxtBox.Text.ToLower()) ||
                     p.Category.Name.ToLower().Contains(searchTxtBox.Text.ToLower()) ||
@@ -137,7 +145,7 @@ namespace OrderMe.Forms
             // get the category, doesn't matter if we are creating or editing
             ProductCategory category = _Categories
                         .Where(c => c.ProductCategoryId == int.Parse(CategoryCB.SelectedValue.ToString())).FirstOrDefault();
-            
+
             //new instance
             Product prod = new Product();
 
@@ -145,7 +153,7 @@ namespace OrderMe.Forms
             if (!NewProdCheckBox.Checked)
             {
                 prod = _Products
-                    .Where(p=>p.ProductId == int.Parse(ProductsGrid.SelectedRows[0].Cells["ProductId"].Value.ToString()))
+                    .Where(p => p.ProductId == int.Parse(ProductsGrid.SelectedRows[0].Cells["ProductId"].Value.ToString()))
                     .FirstOrDefault();
                 if (prod == null)
                 {
@@ -165,21 +173,31 @@ namespace OrderMe.Forms
 
                 ProductsGrid.Rows.Clear();
 
-                loadProductsGrid(_repository.Getproducts());
+                _Products = _repository.Getproducts();
 
-                //if we are creating, cleanup the name and sku boxes
-                if (!NewProdCheckBox.Checked)
+                loadProductsGrid(_Products);
+
+                //reset create edit form
+                if (NewProdCheckBox.Checked)
                 {
                     skuTextBox.Text = string.Empty;
                     NameTxt.Text = string.Empty;
                 }
                 
-               
-                //ORDER THE LIST GROUP BY BRAND, THEN BY CATEGORY, ORDER BY PRODUCTID
-                
+
+
+
+
+
             }
 
             // else show message validation
+        }
+
+        private void showactivecheckbox_OnChange(object sender, EventArgs e)
+        {
+            ProductsGrid.Rows.Clear();
+            loadProductsGrid(_Products);
         }
     }
 
