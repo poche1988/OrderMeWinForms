@@ -135,6 +135,10 @@
     <Compile Include="Migrations\201806250017400_products-ActiveField.Designer.cs">
       <DependentUpon>201806250017400_products-ActiveField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806290156552_suppliers.cs" />
+    <Compile Include="Migrations\201806290156552_suppliers.Designer.cs">
+      <DependentUpon>201806290156552_suppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -142,6 +146,7 @@
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ObservableListSource.cs" />
     <Compile Include="Program.cs" />
@@ -195,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806250017400_products-ActiveField.resx">
       <DependentUpon>201806250017400_products-ActiveField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806290156552_suppliers.resx">
+      <DependentUpon>201806290156552_suppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
