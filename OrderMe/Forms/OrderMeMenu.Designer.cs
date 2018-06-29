@@ -108,6 +108,7 @@
             this.SupliersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SupliersBtn.Textcolor = System.Drawing.Color.Silver;
             this.SupliersBtn.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupliersBtn.Click += new System.EventHandler(this.SupliersBtn_Click);
             // 
             // BrandsBtn
             // 

@@ -196,6 +196,21 @@ namespace OrderMe.DAL
 
         #endregion
 
+        #region suppliers
+
+        public List<Supplier> GetSuppliers()
+        {
+            return _Context.Suppliers.ToList();
+        }
+
+        public void createSupplier(Supplier supp)
+        {
+            _Context.Suppliers.Add(supp);
+            _Context.SaveChanges();
+        }
+
+        #endregion
+
 
     }
 

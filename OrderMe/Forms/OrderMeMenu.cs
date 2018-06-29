@@ -86,5 +86,10 @@ namespace OrderMe.Forms
         {
             OpenFormInContainer(new Brands(_repository));
         }
+
+        private void SupliersBtn_Click(object sender, EventArgs e)
+        {
+            OpenFormInContainer(new Suppliers(_repository));
+        }
     }
 }
