@@ -1,6 +1,7 @@
 ﻿using OrderMe.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -53,6 +54,11 @@ namespace OrderMe.Services
                 MessageBox.Show("Email is NOT sent - Connection Error");
                 return false;
             }
+        }
+
+        public static bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
     }
 }

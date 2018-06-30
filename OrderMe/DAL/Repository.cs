@@ -209,6 +209,15 @@ namespace OrderMe.DAL
             _Context.SaveChanges();
         }
 
+        public void EditSupplier(int id, string name, string email, bool active)
+        {
+            var supp = _Context.Suppliers.Where(s => s.SupplierId == id).FirstOrDefault();
+            supp.Name = name;
+            supp.Email = email;
+            supp.Active = active;
+
+            _Context.SaveChanges();
+        }
         #endregion
 
 
