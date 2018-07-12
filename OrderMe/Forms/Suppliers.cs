@@ -12,12 +12,35 @@ namespace OrderMe.Forms
     {
         private Repository _repository;
         private List<Supplier> _supps;
+        private List<Product> _ActiveProducts;
+        private List<Product> _SupplierProducts;
 
         public Suppliers(Repository repo)
         {
             _repository = repo;
+            
             InitializeComponent();
             loadSuppGrid();
+            loadProductCombobox();
+        }
+
+        //load methods
+
+        private void loadProductCombobox()
+        {
+            _ActiveProducts = _repository.GetActiveProducts();
+
+            Dictionary<int, string> comboSource = new Dictionary<int, string>();
+            
+            foreach (Product prod in _ActiveProducts)
+            {
+                comboSource.Add(prod.ProductId, prod.Category.Brand.Name + " " +prod.Category.Name + " " + prod.ProductName);
+            }
+
+            ProductCB.DataSource = new BindingSource(comboSource, null);
+            ProductCB.DisplayMember = "Value";
+            ProductCB.ValueMember = "Key";
+
         }
 
         void loadSuppGrid()
@@ -39,6 +62,25 @@ namespace OrderMe.Forms
                     if (supp.Active) SuppGrid.Rows.Add(row);
             }
         }
+
+        private void loadProductSupplierGrid(int spId)
+        {
+            _SupplierProducts = _repository.GetProductsbySupplier(spId);
+
+            ProductSuplierGrid.Rows.Clear();
+
+            foreach (Product prod in _SupplierProducts)
+            {
+                DataGridViewRow row = (DataGridViewRow)ProductSuplierGrid.Rows[0].Clone();
+                row.Cells[0].Value = prod.ProductId;
+                row.Cells[1].Value = prod.Category.Brand.Name + " " + prod.Category.Name + " " + prod.ProductName;
+
+                ProductSuplierGrid.Rows.Add(row);
+
+            }
+        }
+
+        //Events
 
         private void showActiveSuppCheckBox_OnChange(object sender, EventArgs e)
         {
@@ -64,6 +106,8 @@ namespace OrderMe.Forms
                 var supp = new Supplier { Active = true, Email = newEmailTxt.Text, Name = NewSuppTXT.Text};
                 _repository.createSupplier(supp);
                 loadSuppGrid();
+                NewSuppTXT.Text = string.Empty;
+                newEmailTxt.Text = string.Empty;
             }
         }
 
@@ -79,7 +123,9 @@ namespace OrderMe.Forms
                         NameTxt.Text = row.Cells["SupplierName"].Value.ToString();
                         EmailTxt.Text = row.Cells["Email"].Value.ToString();
                         ActiveCheckBox.Checked = bool.Parse(row.Cells["Active"].Value.ToString());
-                        //cargar productos en la grilla q va a estar a la derecha
+
+                        //load products
+                        loadProductSupplierGrid(int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString()));
                     }
                 }
                 catch (Exception ex)
@@ -111,6 +157,33 @@ namespace OrderMe.Forms
             }
         }
 
-        
+        private void AddProductSupplierBtn_Click(object sender, EventArgs e)
+        {
+            
+
+            if (SuppGrid.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                int supplierId = int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString());
+                int ProductId = ((KeyValuePair<int, string>)ProductCB.SelectedItem).Key;
+                _repository.CreateSupplierProduct(supplierId, ProductId);
+
+                //refresh supplierProductGrid
+                loadProductSupplierGrid(int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString()));
+
+            }
+        }
+
+        private void DeleteSupplierProductBtn_Click(object sender, EventArgs e)
+        {
+            if (SuppGrid.SelectedRows[0].Cells["Id"].Value != null && ProductSuplierGrid.SelectedRows[0].Cells["ProductId"].Value != null)
+            {
+                int supplierId = int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString());
+                int ProductId = int.Parse(ProductSuplierGrid.SelectedRows[0].Cells["ProductId"].Value.ToString());
+                _repository.DeleteSupplierProduct(supplierId, ProductId);
+
+                //refresh supplierProductGrid
+                loadProductSupplierGrid(int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString()));
+            }
+        }
     }
 }

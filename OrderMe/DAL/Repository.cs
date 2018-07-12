@@ -66,9 +66,13 @@ namespace OrderMe.DAL
                 .Include(p => p.Category)
                 .Include("Category.Brand")
                 .Where(p=>p.Active == true)
+                .OrderBy(p => p.Category.Brand.BrandId)
+                .ThenBy(p => p.Category.ProductCategoryId)
+                .ThenBy(p => p.ProductId)
                 .ToList();
             return products;
         }
+
 
         public Product GetproductById(int id)
         {
@@ -220,7 +224,42 @@ namespace OrderMe.DAL
         }
         #endregion
 
+        #region SupplierProduct
 
+        public List<Product> GetProductsbySupplier(int supplierId)
+        {
+            return _Context.SupplierProducts.Where(sp => sp.Supplier.SupplierId == supplierId).Select(sp => sp.Product).ToList();
+        }
+
+        public void CreateSupplierProduct(int supplierId, int productId)
+        {
+            SupplierProduct sp = _Context.SupplierProducts
+                .Where(s => s.Supplier.SupplierId == supplierId && s.Product.ProductId == productId).FirstOrDefault();
+
+            if (sp == null)
+            {
+                var newsp = new SupplierProduct
+                {
+                    Product = _Context.Products.Where(p => p.ProductId == productId).FirstOrDefault(),
+                    Supplier = _Context.Suppliers.Where(s => s.SupplierId == supplierId).FirstOrDefault()
+                };
+                _Context.SupplierProducts.Add(newsp);
+                _Context.SaveChanges();
+            }
+
+            
+        }
+
+        public void DeleteSupplierProduct(int supplierId, int productId)
+        {
+            SupplierProduct sp = _Context.SupplierProducts
+                .Where(s => s.Supplier.SupplierId == supplierId && s.Product.ProductId == productId).FirstOrDefault();
+
+            _Context.SupplierProducts.Remove(sp);
+            _Context.SaveChanges();
+        }
+
+        #endregion
     }
 
 

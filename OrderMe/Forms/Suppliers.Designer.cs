@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suppliers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suppliers));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -61,9 +64,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.newEmailTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ProductCB = new System.Windows.Forms.ComboBox();
+            this.ProductSuplierGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.AddProductSupplierBtn = new System.Windows.Forms.PictureBox();
+            this.DeleteSupplierProductBtn = new System.Windows.Forms.PictureBox();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.saveEditBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSuppBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuppGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductSuplierGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddProductSupplierBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteSupplierProductBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -294,19 +306,19 @@
             // 
             // SuppGrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SuppGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SuppGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.SuppGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.SuppGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SuppGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SuppGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SuppGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.SuppGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SuppGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -314,14 +326,14 @@
             this.Email,
             this.Active});
             this.SuppGrid.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SuppGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SuppGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.SuppGrid.DoubleBuffered = true;
             this.SuppGrid.EnableHeadersVisualStyles = false;
             this.SuppGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -411,11 +423,103 @@
             this.label7.TabIndex = 63;
             this.label7.Text = "               Email";
             // 
+            // ProductCB
+            // 
+            this.ProductCB.FormattingEnabled = true;
+            this.ProductCB.Location = new System.Drawing.Point(573, 145);
+            this.ProductCB.Name = "ProductCB";
+            this.ProductCB.Size = new System.Drawing.Size(193, 21);
+            this.ProductCB.TabIndex = 73;
+            // 
+            // ProductSuplierGrid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProductSuplierGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProductSuplierGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.ProductSuplierGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProductSuplierGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductSuplierGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ProductSuplierGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductSuplierGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.dataGridViewTextBoxColumn4});
+            this.ProductSuplierGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductSuplierGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ProductSuplierGrid.DoubleBuffered = true;
+            this.ProductSuplierGrid.EnableHeadersVisualStyles = false;
+            this.ProductSuplierGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ProductSuplierGrid.HeaderForeColor = System.Drawing.Color.White;
+            this.ProductSuplierGrid.Location = new System.Drawing.Point(573, 202);
+            this.ProductSuplierGrid.Name = "ProductSuplierGrid";
+            this.ProductSuplierGrid.ReadOnly = true;
+            this.ProductSuplierGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ProductSuplierGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductSuplierGrid.Size = new System.Drawing.Size(361, 440);
+            this.ProductSuplierGrid.TabIndex = 74;
+            // 
+            // AddProductSupplierBtn
+            // 
+            this.AddProductSupplierBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddProductSupplierBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductSupplierBtn.Image")));
+            this.AddProductSupplierBtn.Location = new System.Drawing.Point(772, 132);
+            this.AddProductSupplierBtn.Name = "AddProductSupplierBtn";
+            this.AddProductSupplierBtn.Size = new System.Drawing.Size(44, 44);
+            this.AddProductSupplierBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddProductSupplierBtn.TabIndex = 75;
+            this.AddProductSupplierBtn.TabStop = false;
+            this.AddProductSupplierBtn.Click += new System.EventHandler(this.AddProductSupplierBtn_Click);
+            // 
+            // DeleteSupplierProductBtn
+            // 
+            this.DeleteSupplierProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteSupplierProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteSupplierProductBtn.Image")));
+            this.DeleteSupplierProductBtn.Location = new System.Drawing.Point(940, 202);
+            this.DeleteSupplierProductBtn.Name = "DeleteSupplierProductBtn";
+            this.DeleteSupplierProductBtn.Size = new System.Drawing.Size(36, 33);
+            this.DeleteSupplierProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DeleteSupplierProductBtn.TabIndex = 76;
+            this.DeleteSupplierProductBtn.TabStop = false;
+            this.DeleteSupplierProductBtn.Click += new System.EventHandler(this.DeleteSupplierProductBtn_Click);
+            // 
+            // ProductId
+            // 
+            this.ProductId.DataPropertyName = "Id";
+            this.ProductId.HeaderText = "Id";
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Product";
+            this.dataGridViewTextBoxColumn4.FillWeight = 250F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Product";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 250;
+            // 
             // Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.DeleteSupplierProductBtn);
+            this.Controls.Add(this.AddProductSupplierBtn);
+            this.Controls.Add(this.ProductSuplierGrid);
+            this.Controls.Add(this.ProductCB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.newEmailTxt);
             this.Controls.Add(this.label6);
@@ -445,6 +549,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveEditBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSuppBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuppGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductSuplierGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddProductSupplierBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteSupplierProductBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +587,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Active;
+        private System.Windows.Forms.ComboBox ProductCB;
+        private System.Windows.Forms.PictureBox AddProductSupplierBtn;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid ProductSuplierGrid;
+        private System.Windows.Forms.PictureBox DeleteSupplierProductBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
