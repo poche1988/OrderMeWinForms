@@ -12,6 +12,7 @@ namespace OrderMe.Forms
     {
         private Repository _repository;
         private List<Supplier> _supps;
+        private List<Brand> _Brands;
         private List<Product> _ActiveProducts;
         private List<Product> _SupplierProducts;
 
@@ -21,13 +22,20 @@ namespace OrderMe.Forms
             
             InitializeComponent();
             loadSuppGrid();
-            loadProductCombobox();
+            loadComboboxes();
         }
 
         //load methods
 
-        private void loadProductCombobox()
+        private void loadComboboxes()
         {
+            //load brands
+            _Brands = _repository.GetActivebrands();
+            BrandCB.DataSource = _Brands;
+            BrandCB.DisplayMember = "Name";
+            BrandCB.ValueMember = "BrandId";
+
+            //load products
             _ActiveProducts = _repository.GetActiveProducts();
 
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
@@ -184,6 +192,29 @@ namespace OrderMe.Forms
                 //refresh supplierProductGrid
                 loadProductSupplierGrid(int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString()));
             }
+        }
+
+        private void AsignBrandProductsBtn_Click(object sender, EventArgs e)
+        {
+            if (SuppGrid.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                int supplierId = int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString());
+
+                int BrandId;
+                if (int.TryParse(BrandCB.SelectedValue.ToString(), out BrandId))
+                {
+                    BrandId = int.Parse(BrandCB.SelectedValue.ToString());
+                    List<Product> productsbybrand = _repository.GetActiveProductsbyBrand(BrandId);
+                    foreach (Product prod in productsbybrand)
+                    {
+                        _repository.CreateSupplierProduct(supplierId, prod.ProductId);
+                    }
+
+                    //refresh supplierProductGrid
+                    loadProductSupplierGrid(int.Parse(SuppGrid.SelectedRows[0].Cells["Id"].Value.ToString()));
+                }
+            }
+            
         }
     }
 }

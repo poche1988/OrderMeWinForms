@@ -73,6 +73,28 @@ namespace OrderMe.DAL
             return products;
         }
 
+        public List<Product> GetActiveProductsbyBrand(int Brandid)
+        {
+            var products = _Context.Products
+                .Include(p => p.Category)
+                .Include("Category.Brand")
+                .Where(p => p.Active == true && p.Category.Brand.BrandId == Brandid)
+                .OrderBy(p => p.Category.Brand.BrandId)
+                .ThenBy(p => p.Category.ProductCategoryId)
+                .ThenBy(p => p.ProductId)
+                .ToList();
+            return products;
+        }
+
+        public Product GetLastProduct()
+        {
+            var product = _Context.Products
+                .Include(p => p.Category)
+                .Include("Category.Brand")
+                .OrderByDescending(p => p.ProductId)
+                .FirstOrDefault();
+            return product;
+        }
 
         public Product GetproductById(int id)
         {
@@ -207,6 +229,11 @@ namespace OrderMe.DAL
             return _Context.Suppliers.ToList();
         }
 
+        public List<Supplier> GetActiveSuppliers()
+        {
+            return _Context.Suppliers.Where(s=>s.Active == true).ToList();
+        }
+
         public void createSupplier(Supplier supp)
         {
             _Context.Suppliers.Add(supp);
@@ -258,6 +285,8 @@ namespace OrderMe.DAL
             _Context.SupplierProducts.Remove(sp);
             _Context.SaveChanges();
         }
+
+        
 
         #endregion
     }

@@ -12,6 +12,7 @@ namespace OrderMe.Forms
     {
         private List<Product> _Products;
         private List<Brand> _Brands;
+        private List<Supplier> _Suppliers;
         private List<ProductCategory> _Categories;
         private readonly Repository _repository;
 
@@ -21,7 +22,7 @@ namespace OrderMe.Forms
             _repository = repo;
             _Products = _repository.Getproducts();
             loadProductsGrid(_Products);
-            loadBrandsCombobox();
+            loadComboboxes();
 
         }
 
@@ -49,12 +50,17 @@ namespace OrderMe.Forms
             }
         }
 
-        void loadBrandsCombobox()
+        void loadComboboxes()
         {
             _Brands = _repository.GetActivebrands();
             BrandCB.DataSource = _Brands;
             BrandCB.DisplayMember = "Name";
             BrandCB.ValueMember = "BrandId";
+
+            _Suppliers = _repository.GetActiveSuppliers();
+            SupplierCB.DataSource = _Suppliers;
+            SupplierCB.DisplayMember = "Name";
+            SupplierCB.ValueMember = "SupplierId";
         }
 
         private void BrandCB_SelectedValueChanged(object sender, System.EventArgs e)
@@ -109,8 +115,14 @@ namespace OrderMe.Forms
                 NameTxt.Text = string.Empty;
                 skuTextBox.Text = string.Empty;
                 ActiveChBox.Checked = true;
+                SupplierCB.Visible = true;
             }
-            else loadProductToEdit();
+            else
+            {
+                SupplierCB.Visible = false;
+                loadProductToEdit();
+            }
+                
 
         }
 
@@ -142,7 +154,11 @@ namespace OrderMe.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            // get the category, doesn't matter if we are creating or editing
+
+            // get the supplier and category, doesn't matter if we are creating or editing
+            Supplier Supp = _Suppliers
+                        .Where(s => s.SupplierId == int.Parse(SupplierCB.SelectedValue.ToString())).FirstOrDefault();
+
             ProductCategory category = _Categories
                         .Where(c => c.ProductCategoryId == int.Parse(CategoryCB.SelectedValue.ToString())).FirstOrDefault();
 
@@ -160,7 +176,6 @@ namespace OrderMe.Forms
                     prod = _repository.GetProductBySKU(ProductsGrid.SelectedRows[0].Cells["SKU"].Value.ToString());
                 }
             }
-
             //validate and if everything is fine, save changes
             if (!string.IsNullOrEmpty(skuTextBox.Text) && !string.IsNullOrEmpty(NameTxt.Text))
             {
@@ -171,6 +186,14 @@ namespace OrderMe.Forms
 
                 _repository.CreateOrEditProduct(prod);
 
+                //save SupplierProduct only when is a new product
+                if (NewProdCheckBox.Checked)
+                {
+                    var LastProd = _repository.GetLastProduct();
+                    _repository.CreateSupplierProduct(Supp.SupplierId, LastProd.ProductId);
+                }
+
+                //refresh Product Grid
                 ProductsGrid.Rows.Clear();
 
                 _Products = _repository.Getproducts();

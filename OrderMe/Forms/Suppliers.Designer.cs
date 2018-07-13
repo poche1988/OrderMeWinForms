@@ -70,12 +70,18 @@
             this.DeleteSupplierProductBtn = new System.Windows.Forms.PictureBox();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.BrandCB = new System.Windows.Forms.ComboBox();
+            this.AsignBrandProductsBtn = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.saveEditBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSuppBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuppGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductSuplierGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductSupplierBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteSupplierProductBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsignBrandProductsBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -90,9 +96,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.label6.Location = new System.Drawing.Point(569, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 19);
+            this.label6.Size = new System.Drawing.Size(153, 19);
             this.label6.TabIndex = 61;
-            this.label6.Text = "Products";
+            this.label6.Text = "Supplier\'s products";
             // 
             // bunifuSeparator3
             // 
@@ -426,7 +432,7 @@
             // ProductCB
             // 
             this.ProductCB.FormattingEnabled = true;
-            this.ProductCB.Location = new System.Drawing.Point(573, 145);
+            this.ProductCB.Location = new System.Drawing.Point(714, 192);
             this.ProductCB.Name = "ProductCB";
             this.ProductCB.Size = new System.Drawing.Size(193, 21);
             this.ProductCB.TabIndex = 73;
@@ -463,21 +469,21 @@
             this.ProductSuplierGrid.EnableHeadersVisualStyles = false;
             this.ProductSuplierGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ProductSuplierGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.ProductSuplierGrid.Location = new System.Drawing.Point(573, 202);
+            this.ProductSuplierGrid.Location = new System.Drawing.Point(573, 255);
             this.ProductSuplierGrid.Name = "ProductSuplierGrid";
             this.ProductSuplierGrid.ReadOnly = true;
             this.ProductSuplierGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.ProductSuplierGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductSuplierGrid.Size = new System.Drawing.Size(361, 440);
+            this.ProductSuplierGrid.Size = new System.Drawing.Size(316, 387);
             this.ProductSuplierGrid.TabIndex = 74;
             // 
             // AddProductSupplierBtn
             // 
             this.AddProductSupplierBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddProductSupplierBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddProductSupplierBtn.Image")));
-            this.AddProductSupplierBtn.Location = new System.Drawing.Point(772, 132);
+            this.AddProductSupplierBtn.Location = new System.Drawing.Point(918, 189);
             this.AddProductSupplierBtn.Name = "AddProductSupplierBtn";
-            this.AddProductSupplierBtn.Size = new System.Drawing.Size(44, 44);
+            this.AddProductSupplierBtn.Size = new System.Drawing.Size(36, 34);
             this.AddProductSupplierBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddProductSupplierBtn.TabIndex = 75;
             this.AddProductSupplierBtn.TabStop = false;
@@ -487,7 +493,7 @@
             // 
             this.DeleteSupplierProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteSupplierProductBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteSupplierProductBtn.Image")));
-            this.DeleteSupplierProductBtn.Location = new System.Drawing.Point(940, 202);
+            this.DeleteSupplierProductBtn.Location = new System.Drawing.Point(918, 255);
             this.DeleteSupplierProductBtn.Name = "DeleteSupplierProductBtn";
             this.DeleteSupplierProductBtn.Size = new System.Drawing.Size(36, 33);
             this.DeleteSupplierProductBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -501,6 +507,7 @@
             this.ProductId.HeaderText = "Id";
             this.ProductId.Name = "ProductId";
             this.ProductId.ReadOnly = true;
+            this.ProductId.Visible = false;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -511,11 +518,69 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 250;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label8.Location = new System.Drawing.Point(569, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(128, 21);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "Add a product";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label9.Location = new System.Drawing.Point(569, 132);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 21);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "All products from";
+            // 
+            // BrandCB
+            // 
+            this.BrandCB.FormattingEnabled = true;
+            this.BrandCB.Location = new System.Drawing.Point(714, 135);
+            this.BrandCB.Name = "BrandCB";
+            this.BrandCB.Size = new System.Drawing.Size(193, 21);
+            this.BrandCB.TabIndex = 79;
+            // 
+            // AsignBrandProductsBtn
+            // 
+            this.AsignBrandProductsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AsignBrandProductsBtn.Image = ((System.Drawing.Image)(resources.GetObject("AsignBrandProductsBtn.Image")));
+            this.AsignBrandProductsBtn.Location = new System.Drawing.Point(918, 130);
+            this.AsignBrandProductsBtn.Name = "AsignBrandProductsBtn";
+            this.AsignBrandProductsBtn.Size = new System.Drawing.Size(36, 36);
+            this.AsignBrandProductsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AsignBrandProductsBtn.TabIndex = 80;
+            this.AsignBrandProductsBtn.TabStop = false;
+            this.AsignBrandProductsBtn.Click += new System.EventHandler(this.AsignBrandProductsBtn_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label10.Location = new System.Drawing.Point(620, 161);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(25, 21);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "or";
+            // 
             // Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.AsignBrandProductsBtn);
+            this.Controls.Add(this.BrandCB);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.DeleteSupplierProductBtn);
             this.Controls.Add(this.AddProductSupplierBtn);
             this.Controls.Add(this.ProductSuplierGrid);
@@ -552,6 +617,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductSuplierGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddProductSupplierBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteSupplierProductBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsignBrandProductsBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,5 +659,10 @@
         private System.Windows.Forms.PictureBox DeleteSupplierProductBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ComboBox BrandCB;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox AsignBrandProductsBtn;
+        private System.Windows.Forms.Label label10;
     }
 }
