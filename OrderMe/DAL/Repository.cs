@@ -258,6 +258,14 @@ namespace OrderMe.DAL
             return _Context.SupplierProducts.Where(sp => sp.Supplier.SupplierId == supplierId).Select(sp => sp.Product).ToList();
         }
 
+        public List<Product> GetActiveProductsbySupplier(int supplierId)
+        {
+            return _Context.SupplierProducts
+                .Where(sp => sp.Supplier.SupplierId == supplierId && sp.Product.Active == true)
+                .Select(sp => sp.Product)
+                .ToList();
+        }
+
         public void CreateSupplierProduct(int supplierId, int productId)
         {
             SupplierProduct sp = _Context.SupplierProducts

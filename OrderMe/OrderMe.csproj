@@ -149,6 +149,10 @@
     <Compile Include="Migrations\201807121719501_SupplierProducts.Designer.cs">
       <DependentUpon>201807121719501_SupplierProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807131855424_SupplierAndCommentInOrder.cs" />
+    <Compile Include="Migrations\201807131855424_SupplierAndCommentInOrder.Designer.cs">
+      <DependentUpon>201807131855424_SupplierAndCommentInOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -220,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807121719501_SupplierProducts.resx">
       <DependentUpon>201807121719501_SupplierProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807131855424_SupplierAndCommentInOrder.resx">
+      <DependentUpon>201807131855424_SupplierAndCommentInOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

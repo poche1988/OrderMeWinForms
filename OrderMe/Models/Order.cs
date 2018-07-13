@@ -21,6 +21,10 @@ namespace OrderMe.Models
 
         public string Contact { get; set; }
 
+        public Supplier Supplier { get; set; }
+
+        public string Comment { get; set; }
+
         public OrderState OrderStatus { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }

@@ -16,21 +16,32 @@ namespace OrderMe.Forms
     public partial class NewOrder : Form
     {
         private List<Product> _products;
+        private List<Supplier> _Suppliers;
         private readonly Repository _repository;
         private readonly OrderMeMenu _form;
 
         public NewOrder(List<Product> products, Repository repo, OrderMeMenu form)
         {
             _repository = repo;
-            _products = products;
             _form = form;
             InitializeComponent();
             DateTxtBox.Text = DateTime.Today.ToString("dd/MM/yyyy");
-            loadProductsGrid(_products);
+            loadSupplierCB();
+            
+        }
+
+        private void loadSupplierCB()
+        {
+            _Suppliers = _repository.GetActiveSuppliers();
+            SupplierCB.DataSource = _Suppliers;
+            SupplierCB.DisplayMember = "Name";
+            SupplierCB.ValueMember = "SupplierId";
         }
 
         void loadProductsGrid(List<Product> products)
         {
+            ProductsGrid.Rows.Clear();
+
             foreach (var product in products)
             {
                 DataGridViewRow row = (DataGridViewRow)ProductsGrid.Rows[0].Clone();
@@ -136,6 +147,21 @@ namespace OrderMe.Forms
             
         }
 
-        
+        private void SupplierCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var Supp = SupplierCB.SelectedItem as Supplier;
+            //Supplier Supp = _Suppliers
+            //            .Where(s => s.SupplierId == int.Parse(SupplierCB.SelectedItem.ToString())).FirstOrDefault();
+
+            if (Supp != null)
+            {
+                _products= _repository.GetActiveProductsbySupplier(Supp.SupplierId);
+
+                loadProductsGrid(_products);
+
+                EmailTxt.Text = Supp.Email;
+            }
+
+        }
     }
 }

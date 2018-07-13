@@ -30,9 +30,9 @@ namespace OrderMe.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewOrder));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,6 +43,11 @@ namespace OrderMe.Forms
             this.DateLabel = new System.Windows.Forms.Label();
             this.DateTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ProductsGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateOrderBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.createandsubmitBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.creatingMsg = new System.Windows.Forms.Label();
@@ -51,11 +56,8 @@ namespace OrderMe.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.CommentsTXT = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SupplierCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.CreatinMsgPanel.SuspendLayout();
             this.SuspendLayout();
@@ -168,22 +170,22 @@ namespace OrderMe.Forms
             // ProductsGrid
             // 
             this.ProductsGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ProductsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.ProductsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProductsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProductsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.ProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.brand,
@@ -191,25 +193,60 @@ namespace OrderMe.Forms
             this.SKU,
             this.productname,
             this.quantity});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductsGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductsGrid.DefaultCellStyle = dataGridViewCellStyle12;
             this.ProductsGrid.DoubleBuffered = true;
             this.ProductsGrid.EnableHeadersVisualStyles = false;
             this.ProductsGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ProductsGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.ProductsGrid.Location = new System.Drawing.Point(16, 158);
+            this.ProductsGrid.Location = new System.Drawing.Point(16, 194);
             this.ProductsGrid.Name = "ProductsGrid";
             this.ProductsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ProductsGrid.Size = new System.Drawing.Size(976, 394);
+            this.ProductsGrid.Size = new System.Drawing.Size(976, 358);
             this.ProductsGrid.TabIndex = 14;
             this.ProductsGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.ProductsGrid_CurrentCellDirtyStateChanged);
             this.ProductsGrid.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ProductsGrid_EditingControlShowing);
+            // 
+            // brand
+            // 
+            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.brand.HeaderText = "Brand";
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 73;
+            // 
+            // categoryname
+            // 
+            this.categoryname.FillWeight = 200F;
+            this.categoryname.HeaderText = "Category";
+            this.categoryname.Name = "categoryname";
+            this.categoryname.ReadOnly = true;
+            this.categoryname.Width = 200;
+            // 
+            // SKU
+            // 
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            // 
+            // productname
+            // 
+            this.productname.FillWeight = 200F;
+            this.productname.HeaderText = "Product";
+            this.productname.Name = "productname";
+            this.productname.ReadOnly = true;
+            this.productname.Width = 200;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
             // 
             // CreateOrderBtn
             // 
@@ -317,7 +354,6 @@ namespace OrderMe.Forms
             this.EmailTxt.Name = "EmailTxt";
             this.EmailTxt.Size = new System.Drawing.Size(236, 44);
             this.EmailTxt.TabIndex = 20;
-            this.EmailTxt.Text = "sales@orijen.co.nz";
             this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
@@ -359,46 +395,34 @@ namespace OrderMe.Forms
             this.label5.TabIndex = 21;
             this.label5.Text = "Comments";
             // 
-            // brand
+            // label6
             // 
-            this.brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.brand.HeaderText = "Brand";
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 73;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.label6.Location = new System.Drawing.Point(12, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 21);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Supplier";
             // 
-            // categoryname
+            // SupplierCB
             // 
-            this.categoryname.FillWeight = 200F;
-            this.categoryname.HeaderText = "Category";
-            this.categoryname.Name = "categoryname";
-            this.categoryname.ReadOnly = true;
-            this.categoryname.Width = 200;
-            // 
-            // SKU
-            // 
-            this.SKU.HeaderText = "SKU";
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            // 
-            // productname
-            // 
-            this.productname.FillWeight = 200F;
-            this.productname.HeaderText = "Product";
-            this.productname.Name = "productname";
-            this.productname.ReadOnly = true;
-            this.productname.Width = 200;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
+            this.SupplierCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SupplierCB.FormattingEnabled = true;
+            this.SupplierCB.Location = new System.Drawing.Point(107, 162);
+            this.SupplierCB.Name = "SupplierCB";
+            this.SupplierCB.Size = new System.Drawing.Size(193, 21);
+            this.SupplierCB.TabIndex = 77;
+            this.SupplierCB.SelectedIndexChanged += new System.EventHandler(this.SupplierCB_SelectedIndexChanged);
             // 
             // NewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.SupplierCB);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.CommentsTXT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.EmailTxt);
@@ -450,5 +474,7 @@ namespace OrderMe.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox SupplierCB;
     }
 }
