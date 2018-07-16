@@ -53,14 +53,22 @@ namespace OrderMe.Forms
         void loadComboboxes()
         {
             _Brands = _repository.GetActivebrands();
-            BrandCB.DataSource = _Brands;
-            BrandCB.DisplayMember = "Name";
-            BrandCB.ValueMember = "BrandId";
+            if(_Brands.Count()>0)
+            {
+                BrandCB.DataSource = _Brands;
+                BrandCB.DisplayMember = "Name";
+                BrandCB.ValueMember = "BrandId";
+            }
+            
 
             _Suppliers = _repository.GetActiveSuppliers();
-            SupplierCB.DataSource = _Suppliers;
-            SupplierCB.DisplayMember = "Name";
-            SupplierCB.ValueMember = "SupplierId";
+            if (_Suppliers.Count() > 0)
+            {
+                SupplierCB.DataSource = _Suppliers;
+                SupplierCB.DisplayMember = "Name";
+                SupplierCB.ValueMember = "SupplierId";
+            }
+            
         }
 
         private void BrandCB_SelectedValueChanged(object sender, System.EventArgs e)
@@ -70,10 +78,13 @@ namespace OrderMe.Forms
             {
                 id = int.Parse(BrandCB.SelectedValue.ToString());
                 _Categories = _repository.GetCategoryByBrandId(id);
-
-                CategoryCB.DataSource = _Categories;
-                CategoryCB.DisplayMember = "Name";
-                CategoryCB.ValueMember = "ProductCategoryId";
+                if (_Categories.Count() > 0)
+                {
+                    CategoryCB.DataSource = _Categories;
+                    CategoryCB.DisplayMember = "Name";
+                    CategoryCB.ValueMember = "ProductCategoryId";
+                }
+                
             }
 
         }

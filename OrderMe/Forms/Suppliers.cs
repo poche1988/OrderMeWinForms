@@ -31,23 +31,32 @@ namespace OrderMe.Forms
         {
             //load brands
             _Brands = _repository.GetActivebrands();
-            BrandCB.DataSource = _Brands;
-            BrandCB.DisplayMember = "Name";
-            BrandCB.ValueMember = "BrandId";
+            if (_Brands.Count > 0)
+            {
+                BrandCB.DataSource = _Brands;
+                BrandCB.DisplayMember = "Name";
+                BrandCB.ValueMember = "BrandId";
+            }
+            
 
             //load products
             _ActiveProducts = _repository.GetActiveProducts();
 
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
-            
-            foreach (Product prod in _ActiveProducts)
+
+            if (_ActiveProducts.Count > 0)
             {
-                comboSource.Add(prod.ProductId, prod.Category.Brand.Name + " " +prod.Category.Name + " " + prod.ProductName);
+                foreach (Product prod in _ActiveProducts)
+                {
+                    comboSource.Add(prod.ProductId, prod.Category.Brand.Name + " " + prod.Category.Name + " " + prod.ProductName);
+                }
+
+                ProductCB.DataSource = new BindingSource(comboSource, null);
+                ProductCB.DisplayMember = "Value";
+                ProductCB.ValueMember = "Key";
             }
 
-            ProductCB.DataSource = new BindingSource(comboSource, null);
-            ProductCB.DisplayMember = "Value";
-            ProductCB.ValueMember = "Key";
+            
 
         }
 

@@ -11,7 +11,7 @@ namespace OrderMe.DAL
             if (!Database.Exists())
             {
                 Database.Create();
-                //DBInitializer.initialize();
+                DBInitializer.initialize();
             }
         }
         public DbSet<User> Users { get; set; }
