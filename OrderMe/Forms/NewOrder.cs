@@ -78,6 +78,9 @@ namespace OrderMe.Forms
 
         private Order createOrder(OrderState state)
         {
+
+            Supplier supplier = _Suppliers
+                        .Where(s => s.SupplierId == int.Parse(SupplierCB.SelectedValue.ToString())).FirstOrDefault();
             int number;
 
             Order order = new Order
@@ -85,7 +88,9 @@ namespace OrderMe.Forms
                 Date = DateTime.Today,
                 Company = CompanyTxtBox.Text,
                 Contact = ContactTxtBox.Text,
-                OrderStatus = state
+                OrderStatus = state,
+                Comment = CommentsTXT.Text,
+                Supplier = supplier
             };
 
 

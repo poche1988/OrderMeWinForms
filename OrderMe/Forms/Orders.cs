@@ -110,6 +110,22 @@ namespace OrderMe.Forms
 
         private void OrderGrid_SelectionChanged(object sender, EventArgs e)
         {
+            //load comments
+            try
+            {
+                if (OrderGrid.SelectedRows[0].Cells["Id"].Value != null)
+                {
+                    DataGridViewRow row = this.OrderGrid.SelectedRows[0];
+                    var order = _Orders.Where(o => o.OrderId == Convert.ToInt32(row.Cells["Id"].Value)).FirstOrDefault();
+                    CommentsTxt.Text = order.Comment;
+                    EmailTxt.Text = order.Supplier.Email;
+                }
+            }
+            catch
+            {
+                // do something
+            }
+
             loadOrderDetailsGrid();
         }
 

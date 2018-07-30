@@ -129,6 +129,7 @@ namespace OrderMe.DAL
             return _Context.Orders
                 .Where(o=>o.OrderStatus != OrderState.Deleted)
                 .Include(o => o.OrderDetails)
+                .Include("Supplier")
                 .OrderByDescending(o=>o.OrderId)
                 .ToList();
         }

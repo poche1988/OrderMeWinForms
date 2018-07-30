@@ -402,7 +402,6 @@ namespace OrderMe.Forms
             this.EmailTxt.Name = "EmailTxt";
             this.EmailTxt.Size = new System.Drawing.Size(236, 44);
             this.EmailTxt.TabIndex = 25;
-            this.EmailTxt.Text = "sales@orijen.co.nz";
             this.EmailTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
